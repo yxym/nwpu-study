@@ -1,6 +1,7 @@
-#西北工业大学课程资料
+# 西北工业大学课程资料
 
 > 本仓库包含西北工业大学本科课程的学习资料、实验报告、课件等。
+> 灵感来源：[PKUanonym/REKCARC-TSC-UHT](https://github.com/PKUanonym/REKCARC-TSC-UHT)
 
 ## 资料列表
 
