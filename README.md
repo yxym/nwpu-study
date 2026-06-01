@@ -1,94 +1,69 @@
-# 课程资料整理
+# 西工大 QM 课程资料整理
 
-> 本仓库整理了本科课程的学习资料、实验报告、课件等。
+本仓库整理西北工业大学伦敦玛丽女王大学工程学院（QM）相关课程资料，内容包括作业、实验报告、原始数据、复习整理、教材/电子书、老师答案等，供同学在学习、复习和课程资料归档时参考。
 
-[![仓库大小](https://img.shields.io/github/repo-size/yxym/nwpu-study?style=flat)](https://github.com/yxym/nwpu-study)
-[![Star](https://img.shields.io/github/stars/yxym/nwpu-study?style=flat)](https://github.com/yxym/nwpu-study/stargazers)
-[![Fork](https://img.shields.io/github/forks/yxym/nwpu-study?style=flat)](https://github.com/yxym/nwpu-study/network)
-[![Issues](https://img.shields.io/github/issues/yxym/nwpu-study?style=flat)](https://github.com/yxym/nwpu-study/issues)
+项目灵感来源于 [PKUanonym/REKCARC-TSC-UHT](https://github.com/PKUanonym/REKCARC-TSC-UHT)。希望这个仓库也能在明确公开边界和尊重版权的前提下，降低资料散落带来的重复劳动。
 
-灵感来源：[PKUanonym/REKCARC-TSC-UHT](https://github.com/PKUanonym/REKCARC-TSC-UHT)
+## 收录范围
 
-## 目录
+当前按学期整理的范围包括：
 
-- [资料目录](#资料目录)
-- [使用说明](#使用说明)
-- [贡献指南](#贡献指南)
-- [注意事项](#注意事项)
+- 大一上
+- 大一下
+- 大二上
+- 大二下
+- 大三上
 
-## 资料目录
+自动生成的课程索引见 [收录内容.md](收录内容.md)。索引由 `scripts/build_manifest.py` 根据白名单课程目录生成，不代表仓库外全部可用资料都已公开收录。
 
-### 大一下学期
+## 公开边界
 
-| 课程 | 内容 |
-|------|------|
-| 工程化学 | 课件、复习资料、实验报告 |
-| 工程材料 | 实验报告、海报 |
-| 科英 | Presentation、Case Study |
-| 计算方法 | 课件、习题 |
-| 高等数学 | 复习资料 |
+本仓库采用白名单制：只有明确列入公开白名单、经过人工确认适合公开的课程资料才进入仓库。
 
-### 大二下学期
+不收录以下内容：
 
-| 课程 | 内容 |
-|------|------|
-| 材料学实验2 | 实验指导、实验报告、原始数据 |
-| 工程力学 | 实验报告、Poster |
-| 热力学与相变 | 课件、习题答案、复习资料 |
-| 毛概 | 复习资料、实践报告 |
-| 大学美育 | 课程作业 |
+- 课件、lecture slides、课堂讲义或教师授课 PPT
+- 学长学姐资料、往年资料、出售资料或来源不明的外部整理
+- 学生会、班级名单、报名表、简历、入党、出国、请假等非课程或隐私资料
+- 其他包含个人敏感信息、版权边界不清或不适合公开传播的文件
 
-## 使用说明
+完整规则见 [docs/public-file-policy.md](docs/public-file-policy.md)。
 
-### 克隆仓库
+## Git LFS
 
-```bash
-git clone https://github.com/yxym/nwpu-study.git
-```
-
-### 安装 Git LFS
-
-本仓库使用 [Git LFS](https://git-lfs.github.com) 存储大文件（PPT、PDF、Word、Excel 等），请先安装：
-
-```bash
-# macOS
-brew install git-lfs
-
-# Ubuntu
-sudo apt install git-lfs
-```
-
-然后初始化：
+仓库中可能包含 PDF、PPT、Word、Excel、图片、压缩包等较大的课程文件，请先安装并启用 Git LFS：
 
 ```bash
 git lfs install
+git lfs pull
 ```
 
-### 更新资料
+首次克隆推荐：
 
 ```bash
+git clone https://github.com/yxym/nwpu-study.git
 cd nwpu-study
-git pull origin main
+git lfs pull
 ```
 
-## 贡献指南
+提交大文件前，请确认对应文件类型已被 Git LFS 跟踪，避免把大文件直接写入普通 Git 历史。
 
-欢迎提交 Pull Request 补充资料！
+## 学术诚信
 
-1. Fork 本仓库
-2. 创建分支 (`git checkout -b add/课程名`)
-3. 添加资料
-4. 提交更改 (`git commit -m '添加XXX课程资料'`)
-5. 推送到分支 (`git push origin add/课程名`)
-6. 提交 Pull Request
+资料仅供学习参考、复习辅助和归档备份。请遵守所在课程、学院和学校的学术诚信要求，不要直接复制他人作业、实验报告、代码或考试答案作为自己的提交内容。对任何课程评价、作业提交、考试复习和引用使用，请自行判断适用性并承担责任。
 
-## 注意事项
+## 贡献说明
 
-- 资料仅供学习参考，请遵守学校相关规定
-- 部分大文件使用 Git LFS 存储
-- 请勿上传超过 100MB 的文件
-- 其他部分的版权归属于其各自的作者
+欢迎通过 Pull Request 补充、修正或移除资料。贡献前请先阅读 [贡献方法.md](贡献方法.md)，并确认新增内容符合公开边界。
 
----
+推荐在提交前运行：
 
-*其他部分的版权归属于其各自的作者。资料仅供参考，请自己判断其适用性。*
+```bash
+python3 scripts/build_manifest.py --check
+```
+
+## 许可与版权
+
+仓库中的整理说明、索引和贡献文档可在注明来源的前提下参考使用。课程资料、教材、电子书、老师答案、同学作业、实验报告及其他文件的版权归其原作者、课程团队、出版社或相应权利人所有。
+
+如你认为仓库中的某个文件不应公开，或涉及版权、隐私、学术诚信等问题，请通过 Issue 或 Pull Request 说明具体路径和原因，我们会尽快处理。
