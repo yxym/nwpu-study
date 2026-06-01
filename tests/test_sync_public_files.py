@@ -21,6 +21,7 @@ class SyncPublicFilesTest(unittest.TestCase):
             rejected_source = source_root / "rejected.docx"
             approved_source.write_text("approved", encoding="utf-8")
             rejected_source.write_text("rejected", encoding="utf-8")
+            whitelist = self._write_whitelist(repo_root, source_root)
 
             approved = self._candidate(
                 approved_source,
@@ -42,6 +43,8 @@ class SyncPublicFilesTest(unittest.TestCase):
                         repo_root.as_posix(),
                         "--review-json",
                         review_json.as_posix(),
+                        "--whitelist",
+                        whitelist.as_posix(),
                         "--dry-run",
                     ]
                 )
@@ -60,6 +63,8 @@ class SyncPublicFilesTest(unittest.TestCase):
                         repo_root.as_posix(),
                         "--review-json",
                         review_json.as_posix(),
+                        "--whitelist",
+                        whitelist.as_posix(),
                     ]
                 )
 
@@ -86,6 +91,7 @@ class SyncPublicFilesTest(unittest.TestCase):
 
             source = source_root / "escape.docx"
             source.write_text("escape", encoding="utf-8")
+            whitelist = self._write_whitelist(repo_root, source_root)
             review_json = self._write_review(
                 repo_root,
                 [self._candidate(source, "../escape.docx", approved=True)],
@@ -99,6 +105,8 @@ class SyncPublicFilesTest(unittest.TestCase):
                         repo_root.as_posix(),
                         "--review-json",
                         review_json.as_posix(),
+                        "--whitelist",
+                        whitelist.as_posix(),
                     ]
                 )
 
@@ -118,6 +126,7 @@ class SyncPublicFilesTest(unittest.TestCase):
             repo_root.mkdir()
             source = source_root / "approved.docx"
             source.write_text("approved", encoding="utf-8")
+            whitelist = self._write_whitelist(repo_root, source_root)
             outside_review = tmp_path / "outside.json"
             outside_review.write_text(
                 json.dumps([self._candidate(source, "public/approved.docx", approved=True)]),
@@ -132,6 +141,8 @@ class SyncPublicFilesTest(unittest.TestCase):
                         repo_root.as_posix(),
                         "--review-json",
                         outside_review.as_posix(),
+                        "--whitelist",
+                        whitelist.as_posix(),
                     ]
                 )
 
@@ -147,6 +158,8 @@ class SyncPublicFilesTest(unittest.TestCase):
                         repo_root.as_posix(),
                         "--review-json",
                         "../outside.json",
+                        "--whitelist",
+                        whitelist.as_posix(),
                     ]
                 )
 
@@ -166,6 +179,7 @@ class SyncPublicFilesTest(unittest.TestCase):
 
             source = source_root / "approved.docx"
             source.write_text("approved", encoding="utf-8")
+            whitelist = self._write_whitelist(repo_root, source_root)
             review_json = self._write_review(
                 repo_root,
                 [self._candidate(source, "public/approved.docx", approved="true")],
@@ -179,6 +193,8 @@ class SyncPublicFilesTest(unittest.TestCase):
                         repo_root.as_posix(),
                         "--review-json",
                         review_json.as_posix(),
+                        "--whitelist",
+                        whitelist.as_posix(),
                     ]
                 )
 
@@ -201,6 +217,7 @@ class SyncPublicFilesTest(unittest.TestCase):
             unsafe_source = source_root / "unsafe.docx"
             safe_source.write_text("safe", encoding="utf-8")
             unsafe_source.write_text("unsafe", encoding="utf-8")
+            whitelist = self._write_whitelist(repo_root, source_root)
             review_json = self._write_review(
                 repo_root,
                 [
@@ -217,6 +234,8 @@ class SyncPublicFilesTest(unittest.TestCase):
                         repo_root.as_posix(),
                         "--review-json",
                         review_json.as_posix(),
+                        "--whitelist",
+                        whitelist.as_posix(),
                     ]
                 )
 
@@ -225,6 +244,127 @@ class SyncPublicFilesTest(unittest.TestCase):
             self.assertFalse((repo_root / "public" / "course" / "safe.docx").exists())
             self.assertFalse((tmp_path / "unsafe.docx").exists())
             self.assertFalse((repo_root / "docs" / "review" / "imported-manifest.json").exists())
+
+    def test_relative_sources_are_resolved_against_whitelist_source_root(self):
+        main = self._main()
+
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp_path = Path(tmp)
+            source_root = tmp_path / "source"
+            repo_root = tmp_path / "repo"
+            course_dir = source_root / "02大二" / "大二上" / "材料化学"
+            course_dir.mkdir(parents=True)
+            repo_root.mkdir()
+
+            source = course_dir / "approved.docx"
+            source.write_text("approved", encoding="utf-8")
+            whitelist = self._write_whitelist(repo_root, source_root)
+            review_json = self._write_review(
+                repo_root,
+                [
+                    self._candidate(
+                        "02大二/大二上/材料化学/approved.docx",
+                        "public/course/approved.docx",
+                        approved=True,
+                    )
+                ],
+            )
+
+            with redirect_stdout(io.StringIO()):
+                result = main(
+                    [
+                        "--repo-root",
+                        repo_root.as_posix(),
+                        "--review-json",
+                        review_json.as_posix(),
+                        "--whitelist",
+                        whitelist.as_posix(),
+                    ]
+                )
+
+            self.assertEqual(result, 0)
+            self.assertEqual((repo_root / "public" / "course" / "approved.docx").read_text(), "approved")
+
+    def test_rejects_absolute_source_outside_whitelist_source_root(self):
+        main = self._main()
+
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp_path = Path(tmp)
+            source_root = tmp_path / "source"
+            outside_root = tmp_path / "outside"
+            repo_root = tmp_path / "repo"
+            source_root.mkdir()
+            outside_root.mkdir()
+            repo_root.mkdir()
+
+            source = outside_root / "approved.docx"
+            source.write_text("approved", encoding="utf-8")
+            whitelist = self._write_whitelist(repo_root, source_root)
+            review_json = self._write_review(
+                repo_root,
+                [self._candidate(source, "public/approved.docx", approved=True)],
+            )
+
+            stderr = io.StringIO()
+            with redirect_stderr(stderr):
+                result = main(
+                    [
+                        "--repo-root",
+                        repo_root.as_posix(),
+                        "--review-json",
+                        review_json.as_posix(),
+                        "--whitelist",
+                        whitelist.as_posix(),
+                    ]
+                )
+
+            self.assertEqual(result, 2)
+            self.assertIn("source path escapes source root", stderr.getvalue())
+            self.assertFalse((repo_root / "public" / "approved.docx").exists())
+
+    def test_dry_run_prints_only_public_safe_relative_paths(self):
+        main = self._main()
+
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp_path = Path(tmp)
+            source_root = tmp_path / "source"
+            repo_root = tmp_path / "repo"
+            course_dir = source_root / "02大二" / "大二上" / "材料化学"
+            course_dir.mkdir(parents=True)
+            repo_root.mkdir()
+
+            source = course_dir / "approved.docx"
+            source.write_text("approved", encoding="utf-8")
+            whitelist = self._write_whitelist(repo_root, source_root)
+            review_json = self._write_review(
+                repo_root,
+                [
+                    self._candidate(
+                        "02大二/大二上/材料化学/approved.docx",
+                        "public/course/approved.docx",
+                        approved=True,
+                    )
+                ],
+            )
+
+            stdout = io.StringIO()
+            with redirect_stdout(stdout):
+                result = main(
+                    [
+                        "--repo-root",
+                        repo_root.as_posix(),
+                        "--review-json",
+                        review_json.as_posix(),
+                        "--whitelist",
+                        whitelist.as_posix(),
+                        "--dry-run",
+                    ]
+                )
+
+            self.assertEqual(result, 0)
+            output = stdout.getvalue()
+            self.assertIn("02大二/大二上/材料化学/approved.docx -> public/course/approved.docx", output)
+            self.assertNotIn(tmp_path.as_posix(), output)
 
     def _main(self):
         try:
@@ -245,18 +385,28 @@ class SyncPublicFilesTest(unittest.TestCase):
         return review_json
 
     def _candidate(self, source, target_rel, approved):
+        source_text = source.as_posix() if isinstance(source, Path) else source
+        source_path = Path(source)
         return {
-            "source": source.as_posix(),
-            "source_rel": source.name,
+            "source": source_text,
+            "source_rel": source_path.name,
             "target_rel": target_rel,
             "semester": "fall-2025",
             "course": "course",
-            "size": source.stat().st_size,
-            "suffix": source.suffix,
+            "size": source.stat().st_size if isinstance(source, Path) else 8,
+            "suffix": source_path.suffix,
             "category": "suggested",
             "reason": "test fixture",
             "approved": approved,
         }
+
+    def _write_whitelist(self, repo_root, source_root):
+        whitelist = repo_root / "public-whitelist.yml"
+        whitelist.write_text(
+            json.dumps({"source_root": source_root.as_posix(), "courses": []}, ensure_ascii=False),
+            encoding="utf-8",
+        )
+        return whitelist
 
 
 if __name__ == "__main__":

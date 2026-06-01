@@ -84,11 +84,28 @@ class CollectCandidatesTest(unittest.TestCase):
             self.assertIn("Lecture 1.pptx", markdown)
             self.assertIn("M9 report.docx", serialized)
             self.assertIn("Lecture 1.pptx", serialized)
+            self.assertNotIn(source_root.as_posix(), markdown)
+            self.assertNotIn(source_root.as_posix(), serialized)
+            self.assertIn("- JSON: `docs/review/candidates.json`", markdown)
             self.assertNotIn("班级名单", markdown)
             self.assertNotIn("case study个人", markdown)
             self.assertNotIn("班级名单", serialized)
             self.assertNotIn("case study个人", serialized)
             self.assertEqual(len(data), 2)
+            self.assertEqual(
+                sorted(candidate["source"] for candidate in data),
+                [
+                    "02大二/大二上/材料化学/Lecture 1.pptx",
+                    "02大二/大二上/材料化学/M9 report.docx",
+                ],
+            )
+            self.assertEqual(
+                sorted(candidate["source_rel"] for candidate in data),
+                [
+                    "02大二/大二上/材料化学/Lecture 1.pptx",
+                    "02大二/大二上/材料化学/M9 report.docx",
+                ],
+            )
 
     def test_cli_omits_junk_and_pruned_sensitive_source_files(self):
         from scripts.collect_candidates import main

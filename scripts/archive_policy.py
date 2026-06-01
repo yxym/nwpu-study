@@ -212,7 +212,7 @@ def make_candidate(
     target_rel = unique_target_rel(Path(course.semester) / course.target / nested_rel, used_targets)
 
     return Candidate(
-        source=source_file.as_posix(),
+        source=source_rel.as_posix(),
         source_rel=source_rel.as_posix(),
         target_rel=target_rel,
         semester=course.semester,

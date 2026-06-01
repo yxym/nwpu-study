@@ -2,7 +2,7 @@
 
 此文件由 `scripts/collect_candidates.py` 生成。实际导入需要在 JSON 中将确认公开的条目设置为 `approved: true`。
 
-- JSON: `/Users/chexuanming/Desktop/nwpu-study/docs/review/candidates.json`
+- JSON: `docs/review/candidates.json`
 - 候选文件数: 1347
 
 ## 大一上 / 英语课

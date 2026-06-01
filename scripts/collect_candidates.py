@@ -82,7 +82,7 @@ def main(argv: list[str] | None = None) -> int:
 
     candidates = collect_candidates(config)
     write_json(output_json, candidates)
-    write_markdown(output_md, candidates, output_json)
+    write_markdown(output_md, candidates, output_json.relative_to(repo_root))
 
     print(f"Wrote {len(candidates)} candidates to {output_md} and {output_json}")
     return 0
