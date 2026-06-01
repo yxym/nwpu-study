@@ -133,7 +133,7 @@ def classify_path(path: Path, include: Iterable[str] = (), exclude: Iterable[str
 
     matched = _first_keyword(name_lower, COURSEWARE_KEYWORDS)
     if matched is not None:
-        return Classification(CATEGORY_EXCLUDE, f"命中课件关键词：{matched}")
+        return Classification(CATEGORY_REVIEW, f"可能是课件或讲义：{matched}")
 
     return Classification(CATEGORY_REVIEW, "未命中明确规则")
 

@@ -54,6 +54,9 @@ class ArchivePolicyTest(unittest.TestCase):
         self.assertEqual(classify_path(Path("QXU4007 EXP1-2 Report M9.docx")).category, CATEGORY_INCLUDE)
         self.assertEqual(classify_path(Path("托马斯微积分习题答案.pdf")).category, CATEGORY_INCLUDE)
         self.assertEqual(classify_path(Path("Chapter 1 Introduction.pdf")).category, CATEGORY_REVIEW)
+        teaching_schedule = classify_path(Path("教学安排.pdf"))
+        self.assertEqual(teaching_schedule.category, CATEGORY_REVIEW)
+        self.assertIn("可能是课件或讲义：教学", teaching_schedule.reason)
 
     def test_course_patterns_have_expected_priority(self):
         self.assertEqual(
