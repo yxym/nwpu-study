@@ -180,7 +180,7 @@ def unique_target_rel(target_rel: Path, used: set[str]) -> str:
 def iter_source_files(root: Path, prune: Iterable[str] = ()) -> Iterable[Path]:
     prune_patterns = tuple(prune)
     if root.is_file():
-        if not _matches_prune_path(Path(root.name), prune_patterns):
+        if not _is_junk_file(root) and not _matches_prune_path(Path(root.name), prune_patterns):
             yield root
         return
     if root.is_dir():
@@ -195,7 +195,7 @@ def iter_source_files(root: Path, prune: Iterable[str] = ()) -> Iterable[Path]:
             ]
             for filename in filenames:
                 path = current_path / filename
-                if not _matches_prune_path(path.relative_to(root), prune_patterns):
+                if not _is_junk_file(path) and not _matches_prune_path(path.relative_to(root), prune_patterns):
                     yield path
 
 
@@ -257,6 +257,13 @@ def _first_keyword(text: str, keywords: list[str]) -> str | None:
         if keyword.lower() in text:
             return keyword
     return None
+
+
+def _is_junk_file(path: Path) -> bool:
+    name_lower = path.name.lower()
+    return name_lower in JUNK_NAMES_LOWER or any(
+        name_lower.startswith(prefix.lower()) for prefix in JUNK_PREFIXES
+    )
 
 
 def _first_pattern(path: Path, patterns: Iterable[str]) -> str | None:

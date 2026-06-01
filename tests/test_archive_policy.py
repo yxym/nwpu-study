@@ -109,6 +109,23 @@ class ArchivePolicyTest(unittest.TestCase):
 
             self.assertEqual(files, [root / "visible.txt"])
 
+    def test_iter_source_files_skips_junk_files(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            nested = root / "nested"
+            nested.mkdir()
+            (root / ".DS_Store").write_text("metadata", encoding="utf-8")
+            (root / "~$temp.docx").write_text("lock", encoding="utf-8")
+            (nested / "Thumbs.db").write_text("thumbs", encoding="utf-8")
+            (nested / "desktop.ini").write_text("desktop", encoding="utf-8")
+            (nested / "._report.docx").write_text("resource fork", encoding="utf-8")
+            (nested / ".~report.docx").write_text("backup", encoding="utf-8")
+            (nested / "report.docx").write_text("report", encoding="utf-8")
+
+            files = list(iter_source_files(root))
+
+            self.assertEqual(files, [nested / "report.docx"])
+
     def test_safe_target_path_rejects_traversal(self):
         repo_root = Path("/tmp/repo")
         with self.assertRaises(ValueError):
@@ -198,6 +215,9 @@ class ArchivePolicyTest(unittest.TestCase):
 
         keying = next(course for course in config.courses if course.semester == "大一下" and course.target == "科英")
         self.assertIn("case study个人/**", keying.prune)
+
+        mayuan = next(course for course in config.courses if course.semester == "大三上" and course.target == "马原")
+        self.assertIn("马原资料出售/**", mayuan.prune)
 
 
 if __name__ == "__main__":

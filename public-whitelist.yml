@@ -28,7 +28,7 @@
     {"semester": "大二下", "target": "毛概", "sources": ["02大二/大二下/毛概"], "include": [], "exclude": []},
     {"semester": "大二下", "target": "物理化学", "sources": ["02大二/大二下/物理化学"], "include": [], "exclude": ["*Lecture*", "*lecture*", "*课件*"]},
     {"semester": "大二下", "target": "faith", "sources": ["02大二/大二下/faith"], "include": [], "exclude": ["*Lecture*", "*lecture*", "*课件*"]},
-    {"semester": "大三上", "target": "马原", "sources": ["03大三上/马原"], "include": [], "exclude": ["*资料出售*"]},
+    {"semester": "大三上", "target": "马原", "sources": ["03大三上/马原"], "include": [], "exclude": ["*资料出售*"], "prune": ["马原资料出售/**"]},
     {"semester": "大三上", "target": "表面与界面", "sources": ["03大三上/2025表面与界面", "03大三上/表界面"], "include": [], "exclude": ["*Lecture*", "*lecture*", "*课件*"]},
     {"semester": "大三上", "target": "结构表征", "sources": ["03大三上/2025结构表征", "03大三上/结构表征"], "include": [], "exclude": ["*Lecture*", "*lecture*", "*课件*"]},
     {"semester": "大三上", "target": "科学与艺术", "sources": ["03大三上/科学与艺术"], "include": [], "exclude": ["*Lecture*", "*lecture*", "*课件*"]},

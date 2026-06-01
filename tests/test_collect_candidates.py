@@ -90,6 +90,76 @@ class CollectCandidatesTest(unittest.TestCase):
             self.assertNotIn("case study个人", serialized)
             self.assertEqual(len(data), 2)
 
+    def test_cli_omits_junk_and_pruned_sensitive_source_files(self):
+        from scripts.collect_candidates import main
+
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp_path = Path(tmp)
+            source_root = tmp_path / "source"
+            repo_root = tmp_path / "repo"
+            course_dir = source_root / "03大三上" / "马原"
+            sale_dir = course_dir / "马原资料出售"
+
+            sale_dir.mkdir(parents=True)
+            repo_root.mkdir()
+
+            (course_dir / "复习总结.docx").write_text("review", encoding="utf-8")
+            (course_dir / ".DS_Store").write_text("metadata", encoding="utf-8")
+            (course_dir / "~$temp.docx").write_text("lock", encoding="utf-8")
+            (sale_dir / "old.pdf").write_text("old", encoding="utf-8")
+
+            whitelist = tmp_path / "public-whitelist.yml"
+            output_md = "docs/review/candidates.md"
+            output_json = "docs/review/candidates.json"
+            whitelist.write_text(
+                json.dumps(
+                    {
+                        "source_root": source_root.as_posix(),
+                        "courses": [
+                            {
+                                "semester": "大三上",
+                                "target": "马原",
+                                "sources": ["03大三上/马原"],
+                                "include": [],
+                                "exclude": ["*资料出售*"],
+                                "prune": ["马原资料出售/**"],
+                            }
+                        ],
+                    },
+                    ensure_ascii=False,
+                    indent=2,
+                ),
+                encoding="utf-8",
+            )
+
+            result = main(
+                [
+                    "--whitelist",
+                    whitelist.as_posix(),
+                    "--repo-root",
+                    repo_root.as_posix(),
+                    "--output-md",
+                    output_md,
+                    "--output-json",
+                    output_json,
+                ]
+            )
+
+            self.assertEqual(result, 0)
+            markdown = (repo_root / output_md).read_text(encoding="utf-8")
+            data = json.loads((repo_root / output_json).read_text(encoding="utf-8"))
+            serialized = json.dumps(data, ensure_ascii=False)
+
+            self.assertIn("复习总结.docx", markdown)
+            self.assertIn("复习总结.docx", serialized)
+            self.assertNotIn(".DS_Store", markdown)
+            self.assertNotIn("~$temp.docx", markdown)
+            self.assertNotIn("马原资料出售", markdown)
+            self.assertNotIn(".DS_Store", serialized)
+            self.assertNotIn("~$temp.docx", serialized)
+            self.assertNotIn("马原资料出售", serialized)
+            self.assertEqual(len(data), 1)
+
     def test_cli_accepts_repo_absolute_outputs_and_rejects_escaping_paths(self):
         from scripts.collect_candidates import main
 
