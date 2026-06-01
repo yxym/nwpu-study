@@ -134,6 +134,12 @@ class ArchivePolicyTest(unittest.TestCase):
         target = safe_target_path(repo_root, "大二上/材料化学/report.docx")
         self.assertEqual(target, (repo_root / "大二上" / "材料化学" / "report.docx").resolve())
 
+    def test_safe_target_path_rejects_absolute_target_inside_repo(self):
+        repo_root = Path("/tmp/repo")
+
+        with self.assertRaisesRegex(ValueError, "target path must be relative"):
+            safe_target_path(repo_root, repo_root / "public" / "x.docx")
+
     def test_unique_target_rel_adds_deterministic_suffix(self):
         used = {"大二上/材料化学/report.docx"}
 

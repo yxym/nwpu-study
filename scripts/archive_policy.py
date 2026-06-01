@@ -150,7 +150,11 @@ def classify_path(path: Path, include: Iterable[str] = (), exclude: Iterable[str
 
 def safe_target_path(repo_root: Path, target_rel: str | Path) -> Path:
     root = repo_root.resolve()
-    target = (root / Path(target_rel)).resolve()
+    target_path = Path(target_rel)
+    if target_path.is_absolute():
+        raise ValueError("target path must be relative")
+
+    target = (root / target_path).resolve()
     try:
         target.relative_to(root)
     except ValueError as exc:

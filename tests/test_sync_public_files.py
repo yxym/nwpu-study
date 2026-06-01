@@ -116,6 +116,46 @@ class SyncPublicFilesTest(unittest.TestCase):
             self.assertFalse((tmp_path / "escape.docx").exists())
             self.assertFalse((repo_root / "docs" / "review" / "imported-manifest.json").exists())
 
+    def test_dry_run_rejects_absolute_target_inside_repo_without_leaking_paths(self):
+        main = self._main()
+
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp_path = Path(tmp)
+            source_root = tmp_path / "source"
+            repo_root = tmp_path / "repo"
+            source_root.mkdir()
+            repo_root.mkdir()
+
+            source = source_root / "approved.docx"
+            source.write_text("approved", encoding="utf-8")
+            whitelist = self._write_whitelist(repo_root, source_root)
+            review_json = self._write_review(
+                repo_root,
+                [self._candidate(source, (repo_root / "public" / "approved.docx").as_posix(), approved=True)],
+            )
+
+            stdout = io.StringIO()
+            stderr = io.StringIO()
+            with redirect_stdout(stdout), redirect_stderr(stderr):
+                result = main(
+                    [
+                        "--repo-root",
+                        repo_root.as_posix(),
+                        "--review-json",
+                        review_json.as_posix(),
+                        "--whitelist",
+                        whitelist.as_posix(),
+                        "--dry-run",
+                    ]
+                )
+
+            self.assertEqual(result, 2)
+            self.assertIn("target path must be relative", stderr.getvalue())
+            self.assertNotIn(tmp_path.as_posix(), stdout.getvalue())
+            self.assertNotIn(repo_root.as_posix(), stdout.getvalue())
+            self.assertFalse((repo_root / "public" / "approved.docx").exists())
+            self.assertFalse((repo_root / "docs" / "review" / "imported-manifest.json").exists())
+
     def test_review_json_must_be_inside_repo_root(self):
         main = self._main()
 
