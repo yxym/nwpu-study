@@ -19,6 +19,7 @@ COURSEWARE_KEYWORDS = ["lecture", "课件", "slides", "chapter", "week", "module
 INCLUDE_KEYWORDS = ["report", "报告", "作业", "homework", "coursework", "data", "原始数据", "raw data", "poster", "presentation", "答辩", "logbook", "worksheet", "工作簿", "代码", "复习", "总结", "笔记"]
 TEXTBOOK_OR_ANSWER_KEYWORDS = ["教材", "课本", "ebook", "e-book", "textbook", "book", "答案", "answer", "answers", "solution", "solutions", "习题答案"]
 AMBIGUOUS_KEYWORDS = ["chapter", "week", "module guide", "module_guide", "revision", "review", "zh-hans", "翻译"]
+EXPLICIT_COURSEWARE_KEYWORDS = ["lecture", "课件", "slides"]
 
 
 @dataclass(frozen=True)
@@ -89,7 +90,7 @@ def load_whitelist(path: Path) -> WhitelistConfig:
     return WhitelistConfig(source_root=Path(str(data["source_root"])), courses=courses)
 
 
-def classify_path(path: Path) -> Classification:
+def classify_path(path: Path, include: Iterable[str] = (), exclude: Iterable[str] = ()) -> Classification:
     path_text = path.as_posix()
     path_lower = path_text.lower()
     name = path.name
@@ -97,6 +98,10 @@ def classify_path(path: Path) -> Classification:
 
     if name in JUNK_NAMES or any(name.startswith(prefix) for prefix in JUNK_PREFIXES):
         return Classification(CATEGORY_EXCLUDE, "系统或临时文件")
+
+    matched = _first_pattern(path, exclude)
+    if matched is not None:
+        return Classification(CATEGORY_EXCLUDE, f"命中课程排除规则：{matched}")
 
     matched = _first_keyword(path_lower, PRIVATE_KEYWORDS)
     if matched is not None:
@@ -106,9 +111,17 @@ def classify_path(path: Path) -> Classification:
     if matched is not None:
         return Classification(CATEGORY_EXCLUDE, f"命中历史或外部资料关键词：{matched}")
 
+    matched = _first_pattern(path, include)
+    if matched is not None:
+        return Classification(CATEGORY_INCLUDE, f"命中课程收录规则：{matched}")
+
     matched = _first_keyword(name_lower, TEXTBOOK_OR_ANSWER_KEYWORDS)
     if matched is not None:
         return Classification(CATEGORY_INCLUDE, f"命中教材或答案关键词：{matched}")
+
+    matched = _first_keyword(name_lower, EXPLICIT_COURSEWARE_KEYWORDS)
+    if matched is not None:
+        return Classification(CATEGORY_EXCLUDE, f"命中明确课件关键词：{matched}")
 
     matched = _first_keyword(name_lower, INCLUDE_KEYWORDS)
     if matched is not None:
@@ -154,17 +167,26 @@ def unique_target_rel(target_rel: Path, used: set[str]) -> str:
         index += 1
 
 
-def iter_source_files(roots: Iterable[Path]) -> Iterable[Path]:
-    for root in sorted(roots, key=lambda item: item.as_posix()):
-        if root.is_file():
-            yield root
-            continue
-        if root.is_dir():
-            yield from sorted((path for path in root.rglob("*") if path.is_file()), key=lambda item: item.as_posix())
+def iter_source_files(root: Path) -> Iterable[Path]:
+    if root.is_file():
+        yield root
+        return
+    if root.is_dir():
+        yield from sorted((path for path in root.rglob("*") if path.is_file()), key=lambda item: item.as_posix())
 
 
 def _first_keyword(text: str, keywords: list[str]) -> str | None:
     for keyword in keywords:
         if keyword.lower() in text:
             return keyword
+    return None
+
+
+def _first_pattern(path: Path, patterns: Iterable[str]) -> str | None:
+    path_text = path.as_posix().lower()
+    name = path.name.lower()
+    for pattern in patterns:
+        pattern_text = pattern.lower()
+        if fnmatch.fnmatch(path_text, pattern_text) or fnmatch.fnmatch(name, pattern_text):
+            return pattern
     return None

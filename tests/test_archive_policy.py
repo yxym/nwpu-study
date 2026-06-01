@@ -9,6 +9,7 @@ from scripts.archive_policy import (
     CATEGORY_REVIEW,
     Candidate,
     classify_path,
+    iter_source_files,
     load_whitelist,
     safe_target_path,
     unique_target_rel,
@@ -53,6 +54,32 @@ class ArchivePolicyTest(unittest.TestCase):
         self.assertEqual(classify_path(Path("QXU4007 EXP1-2 Report M9.docx")).category, CATEGORY_INCLUDE)
         self.assertEqual(classify_path(Path("托马斯微积分习题答案.pdf")).category, CATEGORY_INCLUDE)
         self.assertEqual(classify_path(Path("Chapter 1 Introduction.pdf")).category, CATEGORY_REVIEW)
+
+    def test_course_patterns_have_expected_priority(self):
+        self.assertEqual(
+            classify_path(Path("Lecture report.pptx")).category,
+            CATEGORY_EXCLUDE,
+        )
+        self.assertEqual(
+            classify_path(Path("final-report.docx"), exclude=["*final-report*"]).category,
+            CATEGORY_EXCLUDE,
+        )
+        self.assertEqual(
+            classify_path(Path("custom artifact.bin"), include=["*artifact*"]).category,
+            CATEGORY_INCLUDE,
+        )
+
+    def test_iter_source_files_recurses_single_root_in_sorted_order(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            nested = root / "b"
+            nested.mkdir()
+            (nested / "2.txt").write_text("2", encoding="utf-8")
+            (root / "a.txt").write_text("1", encoding="utf-8")
+
+            files = list(iter_source_files(root))
+
+            self.assertEqual(files, [root / "a.txt", nested / "2.txt"])
 
     def test_safe_target_path_rejects_traversal(self):
         repo_root = Path("/tmp/repo")
