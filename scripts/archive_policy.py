@@ -199,6 +199,44 @@ def iter_source_files(root: Path, prune: Iterable[str] = ()) -> Iterable[Path]:
                     yield path
 
 
+def make_candidate(
+    source_root: Path,
+    source_dir: Path,
+    source_file: Path,
+    course: CourseEntry,
+    used_targets: set[str],
+) -> Candidate:
+    source_rel = source_file.relative_to(source_root)
+    nested_rel = source_file.relative_to(source_dir) if source_dir.is_dir() else Path(source_file.name)
+    classification = classify_path(source_rel, include=course.include, exclude=course.exclude)
+    target_rel = unique_target_rel(Path(course.semester) / course.target / nested_rel, used_targets)
+
+    return Candidate(
+        source=source_file.as_posix(),
+        source_rel=source_rel.as_posix(),
+        target_rel=target_rel,
+        semester=course.semester,
+        course=course.target,
+        size=source_file.stat().st_size,
+        suffix=source_file.suffix.lower(),
+        category=classification.category,
+        reason=classification.reason,
+    )
+
+
+def collect_candidates(config: WhitelistConfig) -> list[Candidate]:
+    candidates: list[Candidate] = []
+    used_targets: set[str] = set()
+
+    for course in config.courses:
+        for source in course.sources:
+            source_dir = config.source_root / source
+            for source_file in iter_source_files(source_dir, prune=course.prune):
+                candidates.append(make_candidate(config.source_root, source_dir, source_file, course, used_targets))
+
+    return candidates
+
+
 def _first_keyword(text: str, keywords: list[str]) -> str | None:
     for keyword in keywords:
         if keyword.lower() in text:
