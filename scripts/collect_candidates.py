@@ -2,10 +2,11 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
 from collections import defaultdict
 from pathlib import Path
 
-from scripts.archive_policy import Candidate, collect_candidates, load_whitelist
+from scripts.archive_policy import Candidate, collect_candidates, load_whitelist, validate_source_dirs
 
 
 def write_json(path: Path, candidates: list[Candidate]) -> None:
@@ -34,7 +35,7 @@ def write_markdown(path: Path, candidates: list[Candidate], json_path: Path) -> 
         lines.extend(
             [
                 "",
-                f"## {semester} / {course}",
+                f"## {_escape_markdown_text(semester)} / {_escape_markdown_text(course)}",
                 "",
                 "| 分类 | 源文件 | 目标路径 | 大小 | 理由 |",
                 "| --- | --- | --- | ---: | --- |",
@@ -44,8 +45,8 @@ def write_markdown(path: Path, candidates: list[Candidate], json_path: Path) -> 
             lines.append(
                 "| "
                 f"{_escape_markdown_cell(candidate.category)} | "
-                f"`{candidate.source_rel}` | "
-                f"`{candidate.target_rel}` | "
+                f"{_escape_markdown_cell(candidate.source_rel)} | "
+                f"{_escape_markdown_cell(candidate.target_rel)} | "
                 f"{candidate.size} | "
                 f"{_escape_markdown_cell(candidate.reason)} |"
             )
@@ -62,12 +63,23 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--output-json", default="docs/review/candidates.json")
     args = parser.parse_args(argv)
 
-    repo_root = Path(args.repo_root)
+    repo_root = Path(args.repo_root).resolve()
     whitelist_path = _resolve_under(repo_root, args.whitelist)
-    output_md = _resolve_under(repo_root, args.output_md)
-    output_json = _resolve_under(repo_root, args.output_json)
+    try:
+        output_md = _resolve_output_path(repo_root, args.output_md)
+        output_json = _resolve_output_path(repo_root, args.output_json)
+    except ValueError as exc:
+        print(exc, file=sys.stderr)
+        return 2
 
     config = load_whitelist(whitelist_path)
+    missing_sources = validate_source_dirs(config)
+    if missing_sources:
+        print("Missing source paths:", file=sys.stderr)
+        for path in missing_sources:
+            print(f"- {path}", file=sys.stderr)
+        return 2
+
     candidates = collect_candidates(config)
     write_json(output_json, candidates)
     write_markdown(output_md, candidates, output_json)
@@ -83,8 +95,31 @@ def _resolve_under(root: Path, path: str) -> Path:
     return root / value
 
 
+def _resolve_output_path(repo_root: Path, path: str) -> Path:
+    value = Path(path)
+    if value.is_absolute():
+        raise ValueError(f"output path must be relative to repo root: {path}")
+
+    target = (repo_root / value).resolve()
+    try:
+        target.relative_to(repo_root)
+    except ValueError as exc:
+        raise ValueError(f"output path escapes repo root: {path}") from exc
+    return target
+
+
 def _escape_markdown_cell(text: str) -> str:
-    return text.replace("|", "\\|")
+    return _escape_markdown_text(text)
+
+
+def _escape_markdown_text(text: str) -> str:
+    return (
+        text.replace("\\", "\\\\")
+        .replace("|", "\\|")
+        .replace("\r\n", "<br>")
+        .replace("\r", "<br>")
+        .replace("\n", "<br>")
+    )
 
 
 if __name__ == "__main__":

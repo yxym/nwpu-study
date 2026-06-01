@@ -225,6 +225,11 @@ def make_candidate(
 
 
 def collect_candidates(config: WhitelistConfig) -> list[Candidate]:
+    missing_sources = validate_source_dirs(config)
+    if missing_sources:
+        missing_text = ", ".join(path.as_posix() for path in missing_sources)
+        raise FileNotFoundError(f"missing source paths: {missing_text}")
+
     candidates: list[Candidate] = []
     used_targets: set[str] = set()
 
@@ -235,6 +240,16 @@ def collect_candidates(config: WhitelistConfig) -> list[Candidate]:
                 candidates.append(make_candidate(config.source_root, source_dir, source_file, course, used_targets))
 
     return candidates
+
+
+def validate_source_dirs(config: WhitelistConfig) -> list[Path]:
+    missing: list[Path] = []
+    for course in config.courses:
+        for source in course.sources:
+            source_path = config.source_root / source
+            if not source_path.exists():
+                missing.append(source_path)
+    return missing
 
 
 def _first_keyword(text: str, keywords: list[str]) -> str | None:
