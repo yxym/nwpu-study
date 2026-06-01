@@ -51,6 +51,7 @@ class ArchivePolicyTest(unittest.TestCase):
         self.assertEqual(classify_path(Path(".DS_Store")).category, CATEGORY_EXCLUDE)
         self.assertEqual(classify_path(Path("学姐资料/复习.docx")).category, CATEGORY_EXCLUDE)
         self.assertEqual(classify_path(Path("Lecture 1.pptx")).category, CATEGORY_EXCLUDE)
+        self.assertEqual(classify_path(Path("课件/report.docx")).category, CATEGORY_EXCLUDE)
         self.assertEqual(classify_path(Path("QXU4007 EXP1-2 Report M9.docx")).category, CATEGORY_INCLUDE)
         self.assertEqual(classify_path(Path("托马斯微积分习题答案.pdf")).category, CATEGORY_INCLUDE)
         self.assertEqual(classify_path(Path("Chapter 1 Introduction.pdf")).category, CATEGORY_REVIEW)
