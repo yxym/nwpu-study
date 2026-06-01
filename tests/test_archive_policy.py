@@ -139,6 +139,14 @@ class ArchivePolicyTest(unittest.TestCase):
         with self.assertRaises(ValueError):
             Candidate.from_dict(data)
 
+    def test_project_whitelist_has_only_approved_semesters(self):
+        config = load_whitelist(Path("public-whitelist.yml"))
+        semesters = {course.semester for course in config.courses}
+
+        self.assertEqual(semesters, {"大一上", "大一下", "大二上", "大二下", "大三上"})
+        self.assertTrue(all(course.sources for course in config.courses))
+        self.assertTrue(all(not source.startswith("../") for course in config.courses for source in course.sources))
+
 
 if __name__ == "__main__":
     unittest.main()
