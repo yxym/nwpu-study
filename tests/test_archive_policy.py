@@ -49,6 +49,8 @@ class ArchivePolicyTest(unittest.TestCase):
 
     def test_classification_rules(self):
         self.assertEqual(classify_path(Path(".DS_Store")).category, CATEGORY_EXCLUDE)
+        self.assertEqual(classify_path(Path("thumbs.db")).category, CATEGORY_EXCLUDE)
+        self.assertEqual(classify_path(Path("Desktop.ini")).category, CATEGORY_EXCLUDE)
         self.assertEqual(classify_path(Path("学姐资料/复习.docx")).category, CATEGORY_EXCLUDE)
         self.assertEqual(classify_path(Path("Lecture 1.pptx")).category, CATEGORY_EXCLUDE)
         self.assertEqual(classify_path(Path("课件/report.docx")).category, CATEGORY_EXCLUDE)
@@ -119,6 +121,23 @@ class ArchivePolicyTest(unittest.TestCase):
 
         self.assertEqual(restored.target_rel, "大二上/材料化学/report.docx")
         self.assertFalse(restored.approved)
+
+    def test_candidate_rejects_non_bool_approved(self):
+        data = {
+            "source": "/tmp/source/report.docx",
+            "source_rel": "02大二/大二上/材料化学/report.docx",
+            "target_rel": "大二上/材料化学/report.docx",
+            "semester": "大二上",
+            "course": "材料化学",
+            "size": 12,
+            "suffix": ".docx",
+            "category": CATEGORY_INCLUDE,
+            "reason": "命中文件名：report",
+            "approved": "false",
+        }
+
+        with self.assertRaises(ValueError):
+            Candidate.from_dict(data)
 
 
 if __name__ == "__main__":

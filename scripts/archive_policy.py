@@ -11,6 +11,7 @@ CATEGORY_EXCLUDE = "建议排除"
 CATEGORY_REVIEW = "需要人工判断"
 
 JUNK_NAMES = {".DS_Store", "Thumbs.db", "desktop.ini"}
+JUNK_NAMES_LOWER = {name.lower() for name in JUNK_NAMES}
 JUNK_PREFIXES = ("~$", "._", ".~")
 
 PRIVATE_KEYWORDS = ["个人", "学生会", "名单", "报名表", "简历", "入党", "出国", "请假", "班级", "花名册"]
@@ -61,6 +62,10 @@ class Candidate:
 
     @classmethod
     def from_dict(cls, data: dict[str, object]) -> "Candidate":
+        approved = data.get("approved", False)
+        if not isinstance(approved, bool):
+            raise ValueError("approved must be a bool")
+
         return cls(
             source=str(data["source"]),
             source_rel=str(data["source_rel"]),
@@ -71,7 +76,7 @@ class Candidate:
             suffix=str(data["suffix"]),
             category=str(data["category"]),
             reason=str(data["reason"]),
-            approved=bool(data.get("approved", False)),
+            approved=approved,
         )
 
 
@@ -96,7 +101,9 @@ def classify_path(path: Path, include: Iterable[str] = (), exclude: Iterable[str
     name = path.name
     name_lower = name.lower()
 
-    if name in JUNK_NAMES or any(name.startswith(prefix) for prefix in JUNK_PREFIXES):
+    if name_lower in JUNK_NAMES_LOWER or any(
+        name_lower.startswith(prefix.lower()) for prefix in JUNK_PREFIXES
+    ):
         return Classification(CATEGORY_EXCLUDE, "系统或临时文件")
 
     matched = _first_pattern(path, exclude)
