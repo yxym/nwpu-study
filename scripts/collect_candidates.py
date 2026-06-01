@@ -97,10 +97,7 @@ def _resolve_under(root: Path, path: str) -> Path:
 
 def _resolve_output_path(repo_root: Path, path: str) -> Path:
     value = Path(path)
-    if value.is_absolute():
-        raise ValueError(f"output path must be relative to repo root: {path}")
-
-    target = (repo_root / value).resolve()
+    target = value.resolve() if value.is_absolute() else (repo_root / value).resolve()
     try:
         target.relative_to(repo_root)
     except ValueError as exc:

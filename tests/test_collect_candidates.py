@@ -90,7 +90,7 @@ class CollectCandidatesTest(unittest.TestCase):
             self.assertNotIn("case study个人", serialized)
             self.assertEqual(len(data), 2)
 
-    def test_cli_rejects_output_paths_outside_repo(self):
+    def test_cli_accepts_repo_absolute_outputs_and_rejects_escaping_paths(self):
         from scripts.collect_candidates import main
 
         with tempfile.TemporaryDirectory() as tmp:
@@ -104,6 +104,25 @@ class CollectCandidatesTest(unittest.TestCase):
             whitelist = self._write_whitelist(tmp_path, source_root)
 
             absolute_md = repo_root / "docs" / "review" / "absolute.md"
+            absolute_json = repo_root / "docs" / "review" / "absolute.json"
+            result = main(
+                [
+                    "--whitelist",
+                    whitelist.as_posix(),
+                    "--repo-root",
+                    repo_root.as_posix(),
+                    "--output-md",
+                    absolute_md.as_posix(),
+                    "--output-json",
+                    absolute_json.as_posix(),
+                ]
+            )
+
+            self.assertEqual(result, 0)
+            self.assertTrue(absolute_md.exists())
+            self.assertTrue(absolute_json.exists())
+
+            outside_md = tmp_path / "outside.md"
             stderr = io.StringIO()
             with redirect_stderr(stderr):
                 result = main(
@@ -113,16 +132,37 @@ class CollectCandidatesTest(unittest.TestCase):
                         "--repo-root",
                         repo_root.as_posix(),
                         "--output-md",
-                        absolute_md.as_posix(),
+                        outside_md.as_posix(),
                         "--output-json",
-                        "docs/review/candidates.json",
+                        "docs/review/rejected-absolute.json",
                     ]
                 )
 
             self.assertEqual(result, 2)
-            self.assertIn("output path must be relative", stderr.getvalue())
-            self.assertFalse(absolute_md.exists())
-            self.assertFalse((repo_root / "docs" / "review" / "candidates.json").exists())
+            self.assertIn("output path escapes repo root", stderr.getvalue())
+            self.assertFalse(outside_md.exists())
+            self.assertFalse((repo_root / "docs" / "review" / "rejected-absolute.json").exists())
+
+            outside_json = tmp_path / "outside.json"
+            stderr = io.StringIO()
+            with redirect_stderr(stderr):
+                result = main(
+                    [
+                        "--whitelist",
+                        whitelist.as_posix(),
+                        "--repo-root",
+                        repo_root.as_posix(),
+                        "--output-md",
+                        "docs/review/rejected-absolute-json.md",
+                        "--output-json",
+                        outside_json.as_posix(),
+                    ]
+                )
+
+            self.assertEqual(result, 2)
+            self.assertIn("output path escapes repo root", stderr.getvalue())
+            self.assertFalse((repo_root / "docs" / "review" / "rejected-absolute-json.md").exists())
+            self.assertFalse(outside_json.exists())
 
             escaping_md = tmp_path / "escaping.md"
             stderr = io.StringIO()
@@ -136,14 +176,14 @@ class CollectCandidatesTest(unittest.TestCase):
                         "--output-md",
                         "../escaping.md",
                         "--output-json",
-                        "docs/review/candidates.json",
+                        "docs/review/rejected-relative.json",
                     ]
                 )
 
             self.assertEqual(result, 2)
             self.assertIn("output path escapes repo root", stderr.getvalue())
             self.assertFalse(escaping_md.exists())
-            self.assertFalse((repo_root / "docs" / "review" / "candidates.json").exists())
+            self.assertFalse((repo_root / "docs" / "review" / "rejected-relative.json").exists())
 
             escaping_json = tmp_path / "escaping.json"
             stderr = io.StringIO()
