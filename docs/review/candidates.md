@@ -93,7 +93,7 @@
 | 需要人工判断 | 01大一/大一下/工程化学/15QX4001 Rotation 1 Set 2.pdf | 大一下/工程化学/15QX4001 Rotation 1 Set 2.pdf | 43169 | 未命中明确规则 |
 | 需要人工判断 | 01大一/大一下/工程化学/16QX4001 Rotation 1 Set 1.pdf | 大一下/工程化学/16QX4001 Rotation 1 Set 1.pdf | 45675 | 未命中明确规则 |
 | 需要人工判断 | 01大一/大一下/工程化学/17QX4001 Rotation 1 Set 3.pdf | 大一下/工程化学/17QX4001 Rotation 1 Set 3.pdf | 48738 | 未命中明确规则 |
-| 建议收录 | 01大一/大一下/工程化学/18Kinetics exercises without solutions.pdf | 大一下/工程化学/18Kinetics exercises without solutions.pdf | 392105 | 命中教材或答案关键词：solution |
+| 需要人工判断 | 01大一/大一下/工程化学/18Kinetics exercises without solutions.pdf | 大一下/工程化学/18Kinetics exercises without solutions.pdf | 392105 | 未命中明确规则 |
 | 需要人工判断 | 01大一/大一下/工程化学/19Resonance and Free Radicals Problem Set.pdf | 大一下/工程化学/19Resonance and Free Radicals Problem Set.pdf | 176063 | 未命中明确规则 |
 | 建议排除 | 01大一/大一下/工程化学/2 Periodic Properties.pptx | 大一下/工程化学/2 Periodic Properties.pptx | 31148573 | 命中课程排除规则：*.pptx |
 | 建议排除 | 01大一/大一下/工程化学/20Alcohols Alkyl halides Nucleophilic Substitution.pptx | 大一下/工程化学/20Alcohols Alkyl halides Nucleophilic Substitution.pptx | 2211195 | 命中课程排除规则：*.pptx |
@@ -621,20 +621,20 @@
 | 需要人工判断 | 02大二/大二下/热力学与相变/热力学/15-化学平衡1-2025改.pdf | 大二下/热力学与相变/热力学/15-化学平衡1-2025改.pdf | 2985302 | 未命中明确规则 |
 | 需要人工判断 | 02大二/大二下/热力学与相变/热力学/15. Chapter 8 The Behavior of Gases-2020.04.14-kh.pdf | 大二下/热力学与相变/热力学/15. Chapter 8 The Behavior of Gases-2020.04.14-kh.pdf | 1409213 | 命中需人工判断关键词：chapter |
 | 需要人工判断 | 02大二/大二下/热力学与相变/热力学/16-化学平衡2.pdf | 大二下/热力学与相变/热力学/16-化学平衡2.pdf | 3443732 | 未命中明确规则 |
-| 建议收录 | 02大二/大二下/热力学与相变/热力学/16. Chapter 9 The Behavior of Solutions_Part I-2020.04.16-kh zh-Hans.pdf | 大二下/热力学与相变/热力学/16. Chapter 9 The Behavior of Solutions_Part I-2020.04.16-kh zh-Hans.pdf | 1444208 | 命中教材或答案关键词：solution |
-| 建议收录 | 02大二/大二下/热力学与相变/热力学/16. Chapter 9 The Behavior of Solutions_Part I-2020.04.16-kh.pdf | 大二下/热力学与相变/热力学/16. Chapter 9 The Behavior of Solutions_Part I-2020.04.16-kh.pdf | 964389 | 命中教材或答案关键词：solution |
+| 需要人工判断 | 02大二/大二下/热力学与相变/热力学/16. Chapter 9 The Behavior of Solutions_Part I-2020.04.16-kh zh-Hans.pdf | 大二下/热力学与相变/热力学/16. Chapter 9 The Behavior of Solutions_Part I-2020.04.16-kh zh-Hans.pdf | 1444208 | 命中需人工判断关键词：chapter |
+| 需要人工判断 | 02大二/大二下/热力学与相变/热力学/16. Chapter 9 The Behavior of Solutions_Part I-2020.04.16-kh.pdf | 大二下/热力学与相变/热力学/16. Chapter 9 The Behavior of Solutions_Part I-2020.04.16-kh.pdf | 964389 | 命中需人工判断关键词：chapter |
 | 建议收录 | 02大二/大二下/热力学与相变/热力学/17 总复习+作业讲解.pdf | 大二下/热力学与相变/热力学/17 总复习+作业讲解.pdf | 5800085 | 命中文件名：作业 |
-| 建议收录 | 02大二/大二下/热力学与相变/热力学/17. Chapter 9 Part II. Section 6-8 The Behavior of Solutions-2020.04.21-kh.pdf | 大二下/热力学与相变/热力学/17. Chapter 9 Part II. Section 6-8 The Behavior of Solutions-2020.04.21-kh.pdf | 920254 | 命中教材或答案关键词：solution |
-| 建议收录 | 02大二/大二下/热力学与相变/热力学/18. Chapter 9 Part III. Section 9-12 The Behavior of Solutions-kh-2020.04.23.pdf | 大二下/热力学与相变/热力学/18. Chapter 9 Part III. Section 9-12 The Behavior of Solutions-kh-2020.04.23.pdf | 1067273 | 命中教材或答案关键词：solution |
+| 需要人工判断 | 02大二/大二下/热力学与相变/热力学/17. Chapter 9 Part II. Section 6-8 The Behavior of Solutions-2020.04.21-kh.pdf | 大二下/热力学与相变/热力学/17. Chapter 9 Part II. Section 6-8 The Behavior of Solutions-2020.04.21-kh.pdf | 920254 | 命中需人工判断关键词：chapter |
+| 需要人工判断 | 02大二/大二下/热力学与相变/热力学/18. Chapter 9 Part III. Section 9-12 The Behavior of Solutions-kh-2020.04.23.pdf | 大二下/热力学与相变/热力学/18. Chapter 9 Part III. Section 9-12 The Behavior of Solutions-kh-2020.04.23.pdf | 1067273 | 命中需人工判断关键词：chapter |
 | 需要人工判断 | 02大二/大二下/热力学与相变/热力学/19. Chapter 10 Part I. Section 1-4 Gibbs Free Energy Composition and Phase Diagrams of Binary Systems-kh.pdf | 大二下/热力学与相变/热力学/19. Chapter 10 Part I. Section 1-4 Gibbs Free Energy Composition and Phase Diagrams of Binary Systems-kh.pdf | 1696710 | 命中需人工判断关键词：chapter |
 | 需要人工判断 | 02大二/大二下/热力学与相变/热力学/20. Chapter 10 Part II. Section 4 Gibbs Free Energy Composition and Phase Diagrams of Binary Systems-2020.05.01.pdf | 大二下/热力学与相变/热力学/20. Chapter 10 Part II. Section 4 Gibbs Free Energy Composition and Phase Diagrams of Binary Systems-2020.05.01.pdf | 1767869 | 命中需人工判断关键词：chapter |
 | 需要人工判断 | 02大二/大二下/热力学与相变/热力学/21. Chapter 10 Part III. Section 7-8 Gibbs Free Energy Composition and Phase Diagrams of Binary Systems-2020.05.06 (1).pdf | 大二下/热力学与相变/热力学/21. Chapter 10 Part III. Section 7-8 Gibbs Free Energy Composition and Phase Diagrams of Binary Systems-2020.05.06 (1).pdf | 1690000 | 命中需人工判断关键词：chapter |
 | 需要人工判断 | 02大二/大二下/热力学与相变/热力学/22. Chapter 11 Reactions Involving Gases.pdf | 大二下/热力学与相变/热力学/22. Chapter 11 Reactions Involving Gases.pdf | 1047440 | 命中需人工判断关键词：chapter |
 | 需要人工判断 | 02大二/大二下/热力学与相变/热力学/23. Chapter 12 Reactions Involving Pure Condensed Phases and a Gaseous Phase_Part I.pdf | 大二下/热力学与相变/热力学/23. Chapter 12 Reactions Involving Pure Condensed Phases and a Gaseous Phase_Part I.pdf | 994544 | 命中需人工判断关键词：chapter |
 | 需要人工判断 | 02大二/大二下/热力学与相变/热力学/24. Chapter 12 Reactions Involving Pure Condensed Phases and a Gaseous Phase_Part II.pdf | 大二下/热力学与相变/热力学/24. Chapter 12 Reactions Involving Pure Condensed Phases and a Gaseous Phase_Part II.pdf | 1232834 | 命中需人工判断关键词：chapter |
-| 建议收录 | 02大二/大二下/热力学与相变/热力学/25. Chapter 13 Reactions Equilibria in Systems Containing Components in Condensed Solution Part I.pdf | 大二下/热力学与相变/热力学/25. Chapter 13 Reactions Equilibria in Systems Containing Components in Condensed Solution Part I.pdf | 1082083 | 命中教材或答案关键词：solution |
-| 建议收录 | 02大二/大二下/热力学与相变/热力学/26. Chapter 13 Reactions Equilibria in Systems Containing Components in Condensed Solution_PartII.pdf | 大二下/热力学与相变/热力学/26. Chapter 13 Reactions Equilibria in Systems Containing Components in Condensed Solution_PartII.pdf | 1395488 | 命中教材或答案关键词：solution |
-| 建议收录 | 02大二/大二下/热力学与相变/热力学/27. Chapter 13 Reactions Equilibria in Systems Containing Components in Condensed Solution_PartIII.pdf | 大二下/热力学与相变/热力学/27. Chapter 13 Reactions Equilibria in Systems Containing Components in Condensed Solution_PartIII.pdf | 1987787 | 命中教材或答案关键词：solution |
+| 需要人工判断 | 02大二/大二下/热力学与相变/热力学/25. Chapter 13 Reactions Equilibria in Systems Containing Components in Condensed Solution Part I.pdf | 大二下/热力学与相变/热力学/25. Chapter 13 Reactions Equilibria in Systems Containing Components in Condensed Solution Part I.pdf | 1082083 | 命中需人工判断关键词：chapter |
+| 需要人工判断 | 02大二/大二下/热力学与相变/热力学/26. Chapter 13 Reactions Equilibria in Systems Containing Components in Condensed Solution_PartII.pdf | 大二下/热力学与相变/热力学/26. Chapter 13 Reactions Equilibria in Systems Containing Components in Condensed Solution_PartII.pdf | 1395488 | 命中需人工判断关键词：chapter |
+| 需要人工判断 | 02大二/大二下/热力学与相变/热力学/27. Chapter 13 Reactions Equilibria in Systems Containing Components in Condensed Solution_PartIII.pdf | 大二下/热力学与相变/热力学/27. Chapter 13 Reactions Equilibria in Systems Containing Components in Condensed Solution_PartIII.pdf | 1987787 | 命中需人工判断关键词：chapter |
 | 需要人工判断 | 02大二/大二下/热力学与相变/热力学/8.pdf | 大二下/热力学与相变/热力学/8.pdf | 14318965 | 未命中明确规则 |
 | 需要人工判断 | 02大二/大二下/热力学与相变/热力学/9.pdf | 大二下/热力学与相变/热力学/9.pdf | 21529061 | 未命中明确规则 |
 | 建议收录 | 02大二/大二下/热力学与相变/热力学/热力学与相变笔记.pdf | 大二下/热力学与相变/热力学/热力学与相变笔记.pdf | 7536516 | 命中文件名：笔记 |
@@ -1031,16 +1031,16 @@
 | --- | --- | --- | ---: | --- |
 | 需要人工判断 | 03大三上/2025结构表征/1-Introduction 2025.pdf | 大三上/结构表征/1-Introduction 2025.pdf | 6792840 | 未命中明确规则 |
 | 需要人工判断 | 03大三上/2025结构表征/2-Physics of X-ray 2025.pdf | 大三上/结构表征/2-Physics of X-ray 2025.pdf | 2824606 | 未命中明确规则 |
-| 需要人工判断 | 03大三上/2025结构表征/2025_第13节-结构表征_X-Ray Fluorescence Spectroscopy_(2学时).pdf | 大三上/结构表征/2025_第13节-结构表征_X-Ray Fluorescence Spectroscopy_(2学时).pdf | 3400675 | 未命中明确规则 |
-| 需要人工判断 | 03大三上/2025结构表征/2025_第14节-结构表征_Surface structure and principle of XPS_(2学时).pdf | 大三上/结构表征/2025_第14节-结构表征_Surface structure and principle of XPS_(2学时).pdf | 4173120 | 未命中明确规则 |
-| 需要人工判断 | 03大三上/2025结构表征/2025_第15节-结构表征_Surface chemical structure analysis by using XPS_(2学时).pdf | 大三上/结构表征/2025_第15节-结构表征_Surface chemical structure analysis by using XPS_(2学时).pdf | 7236795 | 未命中明确规则 |
-| 需要人工判断 | 03大三上/2025结构表征/2025_第16节-结构表征_Auger Electron Spectroscopy and Its Applications_(2学时).pdf | 大三上/结构表征/2025_第16节-结构表征_Auger Electron Spectroscopy and Its Applications_(2学时).pdf | 2602620 | 未命中明确规则 |
-| 需要人工判断 | 03大三上/2025结构表征/2025_第17节-结构表征_Fundamentals of Infrared (IR) Spectroscopy_(2学时).pdf | 大三上/结构表征/2025_第17节-结构表征_Fundamentals of Infrared (IR) Spectroscopy_(2学时).pdf | 3901389 | 未命中明确规则 |
-| 需要人工判断 | 03大三上/2025结构表征/2025_第18节-结构表征_Fundamentals of Raman Spectroscopy_(2学时).pdf | 大三上/结构表征/2025_第18节-结构表征_Fundamentals of Raman Spectroscopy_(2学时).pdf | 4719744 | 未命中明确规则 |
-| 需要人工判断 | 03大三上/2025结构表征/2025_第19节-结构表征_Interpretation of IR and Raman Spectra_(2学时).pdf | 大三上/结构表征/2025_第19节-结构表征_Interpretation of IR and Raman Spectra_(2学时).pdf | 4425660 | 未命中明确规则 |
+| 建议排除 | 03大三上/2025结构表征/2025_第13节-结构表征_X-Ray Fluorescence Spectroscopy_(2学时).pdf | 大三上/结构表征/2025_第13节-结构表征_X-Ray Fluorescence Spectroscopy_(2学时).pdf | 3400675 | 命中明确课件关键词：学时 |
+| 建议排除 | 03大三上/2025结构表征/2025_第14节-结构表征_Surface structure and principle of XPS_(2学时).pdf | 大三上/结构表征/2025_第14节-结构表征_Surface structure and principle of XPS_(2学时).pdf | 4173120 | 命中明确课件关键词：学时 |
+| 建议排除 | 03大三上/2025结构表征/2025_第15节-结构表征_Surface chemical structure analysis by using XPS_(2学时).pdf | 大三上/结构表征/2025_第15节-结构表征_Surface chemical structure analysis by using XPS_(2学时).pdf | 7236795 | 命中明确课件关键词：学时 |
+| 建议排除 | 03大三上/2025结构表征/2025_第16节-结构表征_Auger Electron Spectroscopy and Its Applications_(2学时).pdf | 大三上/结构表征/2025_第16节-结构表征_Auger Electron Spectroscopy and Its Applications_(2学时).pdf | 2602620 | 命中明确课件关键词：学时 |
+| 建议排除 | 03大三上/2025结构表征/2025_第17节-结构表征_Fundamentals of Infrared (IR) Spectroscopy_(2学时).pdf | 大三上/结构表征/2025_第17节-结构表征_Fundamentals of Infrared (IR) Spectroscopy_(2学时).pdf | 3901389 | 命中明确课件关键词：学时 |
+| 建议排除 | 03大三上/2025结构表征/2025_第18节-结构表征_Fundamentals of Raman Spectroscopy_(2学时).pdf | 大三上/结构表征/2025_第18节-结构表征_Fundamentals of Raman Spectroscopy_(2学时).pdf | 4719744 | 命中明确课件关键词：学时 |
+| 建议排除 | 03大三上/2025结构表征/2025_第19节-结构表征_Interpretation of IR and Raman Spectra_(2学时).pdf | 大三上/结构表征/2025_第19节-结构表征_Interpretation of IR and Raman Spectra_(2学时).pdf | 4425660 | 命中明确课件关键词：学时 |
 | 需要人工判断 | 03大三上/2025结构表征/2025_第20节-结构表征_Thermal Analyses for Structural Changes.pdf | 大三上/结构表征/2025_第20节-结构表征_Thermal Analyses for Structural Changes.pdf | 3850508 | 未命中明确规则 |
-| 需要人工判断 | 03大三上/2025结构表征/2025_第20节-结构表征_Thermal Analyses for Structural Changes_(2学时).pdf | 大三上/结构表征/2025_第20节-结构表征_Thermal Analyses for Structural Changes_(2学时).pdf | 5502602 | 未命中明确规则 |
-| 需要人工判断 | 03大三上/2025结构表征/2025_第20节-结构表征_Thermal Analyses for Structural Changes_(2学时).pptx | 大三上/结构表征/2025_第20节-结构表征_Thermal Analyses for Structural Changes_(2学时).pptx | 7821751 | 未命中明确规则 |
+| 建议排除 | 03大三上/2025结构表征/2025_第20节-结构表征_Thermal Analyses for Structural Changes_(2学时).pdf | 大三上/结构表征/2025_第20节-结构表征_Thermal Analyses for Structural Changes_(2学时).pdf | 5502602 | 命中明确课件关键词：学时 |
+| 建议排除 | 03大三上/2025结构表征/2025_第20节-结构表征_Thermal Analyses for Structural Changes_(2学时).pptx | 大三上/结构表征/2025_第20节-结构表征_Thermal Analyses for Structural Changes_(2学时).pptx | 7821751 | 命中明确课件关键词：学时 |
 | 需要人工判断 | 03大三上/2025结构表征/3-Scattering&Diffraction 2025.pdf | 大三上/结构表征/3-Scattering&Diffraction 2025.pdf | 3486681 | 未命中明确规则 |
 | 需要人工判断 | 03大三上/2025结构表征/4-Structural Characterization-Thinking in reciprocal space 2025.pdf | 大三上/结构表征/4-Structural Characterization-Thinking in reciprocal space 2025.pdf | 2172090 | 未命中明确规则 |
 | 需要人工判断 | 03大三上/2025结构表征/5-Structural Characterization-Determination of crystal structure 2025.pdf | 大三上/结构表征/5-Structural Characterization-Determination of crystal structure 2025.pdf | 1800356 | 未命中明确规则 |
@@ -1261,12 +1261,12 @@
 | 需要人工判断 | 03大三上/2025结构表征/结构表征实验报告/实验报告-SEM/EDS/图片1.tif | 大三上/结构表征/结构表征实验报告/实验报告-SEM/EDS/图片1.tif | 8134626 | 未命中明确规则 |
 | 需要人工判断 | 03大三上/2025结构表征/结构表征实验报告/实验报告-SEM/SE and BES/图片1.tif | 大三上/结构表征/结构表征实验报告/实验报告-SEM/SE and BES/图片1.tif | 980216 | 未命中明确规则 |
 | 需要人工判断 | 03大三上/2025结构表征/结构表征实验报告/实验报告-SEM/SE and BES/图片2.tif | 大三上/结构表征/结构表征实验报告/实验报告-SEM/SE and BES/图片2.tif | 1323024 | 未命中明确规则 |
-| 需要人工判断 | 03大三上/结构表征/2024_第14节-结构表征_X-ray Photoelectron Spectroscopy_(2学时).pptx | 大三上/结构表征/2024_第14节-结构表征_X-ray Photoelectron Spectroscopy_(2学时).pptx | 5739633 | 未命中明确规则 |
-| 建议收录 | 03大三上/结构表征/2024_第15节-结构表征_Analyses of XPS Data_(2学时).pptx | 大三上/结构表征/2024_第15节-结构表征_Analyses of XPS Data_(2学时).pptx | 7209574 | 命中文件名：data |
-| 需要人工判断 | 03大三上/结构表征/2024_第16节-结构表征_Auger Electron Spectroscopy_(2学时).pptx | 大三上/结构表征/2024_第16节-结构表征_Auger Electron Spectroscopy_(2学时).pptx | 2372583 | 未命中明确规则 |
-| 需要人工判断 | 03大三上/结构表征/2024_第17节-结构表征_Infrared (IR) Spectroscopy_(2学时).pptx | 大三上/结构表征/2024_第17节-结构表征_Infrared (IR) Spectroscopy_(2学时).pptx | 6085277 | 未命中明确规则 |
-| 需要人工判断 | 03大三上/结构表征/2024_第18节-结构表征_Raman Spectroscopy_(2学时).pptx | 大三上/结构表征/2024_第18节-结构表征_Raman Spectroscopy_(2学时).pptx | 10063955 | 未命中明确规则 |
-| 需要人工判断 | 03大三上/结构表征/2024_第19节-结构表征_Analyses of IR and Raman Spectra_(2学时).pptx | 大三上/结构表征/2024_第19节-结构表征_Analyses of IR and Raman Spectra_(2学时).pptx | 5548684 | 未命中明确规则 |
+| 建议排除 | 03大三上/结构表征/2024_第14节-结构表征_X-ray Photoelectron Spectroscopy_(2学时).pptx | 大三上/结构表征/2024_第14节-结构表征_X-ray Photoelectron Spectroscopy_(2学时).pptx | 5739633 | 命中明确课件关键词：学时 |
+| 建议排除 | 03大三上/结构表征/2024_第15节-结构表征_Analyses of XPS Data_(2学时).pptx | 大三上/结构表征/2024_第15节-结构表征_Analyses of XPS Data_(2学时).pptx | 7209574 | 命中明确课件关键词：学时 |
+| 建议排除 | 03大三上/结构表征/2024_第16节-结构表征_Auger Electron Spectroscopy_(2学时).pptx | 大三上/结构表征/2024_第16节-结构表征_Auger Electron Spectroscopy_(2学时).pptx | 2372583 | 命中明确课件关键词：学时 |
+| 建议排除 | 03大三上/结构表征/2024_第17节-结构表征_Infrared (IR) Spectroscopy_(2学时).pptx | 大三上/结构表征/2024_第17节-结构表征_Infrared (IR) Spectroscopy_(2学时).pptx | 6085277 | 命中明确课件关键词：学时 |
+| 建议排除 | 03大三上/结构表征/2024_第18节-结构表征_Raman Spectroscopy_(2学时).pptx | 大三上/结构表征/2024_第18节-结构表征_Raman Spectroscopy_(2学时).pptx | 10063955 | 命中明确课件关键词：学时 |
+| 建议排除 | 03大三上/结构表征/2024_第19节-结构表征_Analyses of IR and Raman Spectra_(2学时).pptx | 大三上/结构表征/2024_第19节-结构表征_Analyses of IR and Raman Spectra_(2学时).pptx | 5548684 | 命中明确课件关键词：学时 |
 | 需要人工判断 | 03大三上/结构表征/5-Structural Characterization-Determination of crystal structure 2023.pdf | 大三上/结构表征/5-Structural Characterization-Determination of crystal structure 2023.pdf | 1991472 | 未命中明确规则 |
 | 需要人工判断 | 03大三上/结构表征/6 -Structural Characterization-Electron Diffraction_2024.pdf | 大三上/结构表征/6 -Structural Characterization-Electron Diffraction_2024.pdf | 3375218 | 未命中明确规则 |
 | 需要人工判断 | 03大三上/结构表征/8-Structural Characterization-Imaging & Defects Contrast 2024.pdf | 大三上/结构表征/8-Structural Characterization-Imaging & Defects Contrast 2024.pdf | 4594126 | 未命中明确规则 |

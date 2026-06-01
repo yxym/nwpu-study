@@ -102,9 +102,11 @@ def _resolve_candidate_source(source_root: Path, candidate: Candidate) -> tuple[
 
 
 def _copy_candidates(planned: list[tuple[Candidate, Path, Path, str]]) -> None:
-    for _candidate, source, target, _source_rel in planned:
+    for candidate, source, target, _source_rel in planned:
+        if target.is_file() and target.stat().st_size == candidate.size:
+            continue
         target.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(source, target)
+        shutil.copyfile(source, target)
 
 
 def _manifest_candidates(planned: list[tuple[Candidate, Path, Path, str]]) -> list[Candidate]:

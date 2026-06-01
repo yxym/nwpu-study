@@ -4,6 +4,7 @@ import tempfile
 import unittest
 from contextlib import redirect_stderr, redirect_stdout
 from pathlib import Path
+from unittest.mock import patch
 
 
 class SyncPublicFilesTest(unittest.TestCase):
@@ -364,6 +365,77 @@ class SyncPublicFilesTest(unittest.TestCase):
             self.assertEqual(manifest[0]["source"], "02大二/大二上/材料化学/approved.docx")
             self.assertEqual(manifest[0]["source_rel"], "02大二/大二上/材料化学/approved.docx")
             self.assertNotIn(source_root.as_posix(), manifest_text)
+
+    def test_real_run_copies_file_contents_without_metadata_copy(self):
+        main = self._main()
+
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp_path = Path(tmp)
+            source_root = tmp_path / "source"
+            repo_root = tmp_path / "repo"
+            source_root.mkdir()
+            repo_root.mkdir()
+
+            source = source_root / "approved.pdf"
+            source.write_text("approved", encoding="utf-8")
+            whitelist = self._write_whitelist(repo_root, source_root)
+            review_json = self._write_review(
+                repo_root,
+                [self._candidate(source, "public/approved.pdf", approved=True)],
+            )
+
+            with patch("scripts.sync_public_files.shutil.copy2", side_effect=OSError("metadata copy failed")):
+                with redirect_stdout(io.StringIO()):
+                    result = main(
+                        [
+                            "--repo-root",
+                            repo_root.as_posix(),
+                            "--review-json",
+                            review_json.as_posix(),
+                            "--whitelist",
+                            whitelist.as_posix(),
+                        ]
+                    )
+
+            self.assertEqual(result, 0)
+            self.assertEqual((repo_root / "public" / "approved.pdf").read_text(encoding="utf-8"), "approved")
+
+    def test_real_run_skips_existing_target_with_matching_size(self):
+        main = self._main()
+
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp_path = Path(tmp)
+            source_root = tmp_path / "source"
+            repo_root = tmp_path / "repo"
+            source_root.mkdir()
+            repo_root.mkdir()
+
+            source = source_root / "approved.pdf"
+            source.write_text("approved", encoding="utf-8")
+            target = repo_root / "public" / "approved.pdf"
+            target.parent.mkdir()
+            target.write_text("approved", encoding="utf-8")
+            whitelist = self._write_whitelist(repo_root, source_root)
+            review_json = self._write_review(
+                repo_root,
+                [self._candidate(source, "public/approved.pdf", approved=True)],
+            )
+
+            with patch("scripts.sync_public_files.shutil.copyfile", side_effect=OSError("should not recopy")):
+                with redirect_stdout(io.StringIO()):
+                    result = main(
+                        [
+                            "--repo-root",
+                            repo_root.as_posix(),
+                            "--review-json",
+                            review_json.as_posix(),
+                            "--whitelist",
+                            whitelist.as_posix(),
+                        ]
+                    )
+
+            self.assertEqual(result, 0)
+            self.assertEqual(target.read_text(encoding="utf-8"), "approved")
 
     def test_rejects_absolute_source_outside_whitelist_source_root(self):
         main = self._main()

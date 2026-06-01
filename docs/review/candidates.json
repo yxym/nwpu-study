@@ -33,7 +33,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中文件名：worksheet",
-    "approved": false
+    "approved": true
   },
   {
     "source": "01大一/大一上/09英语课/Paper Cup Recycling_Current Progress and Disposal Prospect.docx",
@@ -105,7 +105,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：book",
-    "approved": false
+    "approved": true
   },
   {
     "source": "01大一/大一上/05faith课/Engineering logbook_attending a presentation.docx",
@@ -117,7 +117,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：book",
-    "approved": false
+    "approved": true
   },
   {
     "source": "01大一/大一上/05faith课/PES1_S1_L11_In-class worksheet.docx",
@@ -129,7 +129,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中文件名：worksheet",
-    "approved": false
+    "approved": true
   },
   {
     "source": "01大一/大一上/05faith课/PES1_S1_L2_Learning styles questionnaire.docx",
@@ -189,7 +189,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中文件名：worksheet",
-    "approved": false
+    "approved": true
   },
   {
     "source": "01大一/大一上/05faith课/PES1_S1_L7_Critical thinking Worksheet.docx",
@@ -201,7 +201,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中文件名：worksheet",
-    "approved": false
+    "approved": true
   },
   {
     "source": "01大一/大一上/05faith课/PES1_S1_Lecture 11_ Lecture Comprehension Pre-class worksheet.docx",
@@ -261,7 +261,7 @@
     "suffix": ".doc",
     "category": "建议收录",
     "reason": "命中文件名：report",
-    "approved": false
+    "approved": true
   },
   {
     "source": "01大一/大一上/11课本/George B. Thomas, Maurice D. Weir, Joel Hass, Frank R. Giordano-Thomas' Calculus, 11th Edition-Addison Wesley (2004).pdf",
@@ -273,7 +273,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中课程收录规则：*课本*",
-    "approved": false
+    "approved": true
   },
   {
     "source": "01大一/大一上/11课本/华章数学译丛（64）：线性代数及其应用 (David C. Lay Steven R. Lay Judi J. McDonald) (Z-Library).pdf",
@@ -284,7 +284,7 @@
     "size": 106868937,
     "suffix": ".pdf",
     "category": "建议收录",
-    "reason": "命中课程收录规则：*课本*",
+    "reason": "命中课程收录规则：*课本*；超大 PDF 暂不公开推送",
     "approved": false
   },
   {
@@ -297,7 +297,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中课程收录规则：*课本*",
-    "approved": false
+    "approved": true
   },
   {
     "source": "01大一/大一上/11课本/大学物理学 英文版.pdf",
@@ -308,7 +308,7 @@
     "size": 254840252,
     "suffix": ".pdf",
     "category": "建议收录",
-    "reason": "命中课程收录规则：*课本*",
+    "reason": "命中课程收录规则：*课本*；超大 PDF 暂不公开推送",
     "approved": false
   },
   {
@@ -321,7 +321,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中课程收录规则：*教材*",
-    "approved": false
+    "approved": true
   },
   {
     "source": "01大一/大一上/11课本/托马斯微积分习题答案.pdf",
@@ -333,7 +333,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中课程收录规则：*课本*",
-    "approved": false
+    "approved": true
   },
   {
     "source": "01大一/大一上/11课本/托马斯微积分第十四版Joel R. Hass, Christopher D. Heil, Maurice D. Weir - Thomas’ Calculus (2017, Pearson) - li.pdf",
@@ -345,7 +345,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中课程收录规则：*课本*",
-    "approved": false
+    "approved": true
   },
   {
     "source": "01大一/大一上/11课本/数学分析.pdf",
@@ -357,7 +357,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中课程收录规则：*课本*",
-    "approved": false
+    "approved": true
   },
   {
     "source": "01大一/大一下/科英/Application of CRISPR:Cas9 on CAR-T Therapy_Group H.pptx",
@@ -381,7 +381,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：presentation",
-    "approved": false
+    "approved": true
   },
   {
     "source": "01大一/大一下/科英/Group presentation H.pptx",
@@ -393,7 +393,7 @@
     "suffix": ".pptx",
     "category": "建议收录",
     "reason": "命中文件名：presentation",
-    "approved": false
+    "approved": true
   },
   {
     "source": "01大一/大一下/科英/QXU3104_Supor Electric Whisk Product Evaluation_2023304252.docx",
@@ -417,7 +417,7 @@
     "suffix": ".pptx",
     "category": "建议收录",
     "reason": "命中文件名：presentation",
-    "approved": false
+    "approved": true
   },
   {
     "source": "01大一/大一下/高等数学/lc220429 Adv. Math 2 Mid-term Review.pdf",
@@ -441,7 +441,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中文件名：report",
-    "approved": false
+    "approved": true
   },
   {
     "source": "01大一/大一下/工程材料/QXU4015_Catapult_Application of Energy Storage and Reflection of Dynamics Theorems _M18 (R1).docx",
@@ -489,7 +489,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：poster",
-    "approved": false
+    "approved": true
   },
   {
     "source": "01大一/大一下/工程材料/工材M18poster 20240531/M18poster.pptx",
@@ -501,7 +501,7 @@
     "suffix": ".pptx",
     "category": "建议收录",
     "reason": "命中文件名：poster",
-    "approved": false
+    "approved": true
   },
   {
     "source": "01大一/大一下/工程材料/工材M18poster 20240531/QXU4015 - Poster template 20240531.pptx",
@@ -513,7 +513,7 @@
     "suffix": ".pptx",
     "category": "建议收录",
     "reason": "命中文件名：poster",
-    "approved": false
+    "approved": true
   },
   {
     "source": "01大一/大一下/工程材料/工材M18poster 20240531/user requirement.xlsx",
@@ -655,8 +655,8 @@
     "course": "工程化学",
     "size": 392105,
     "suffix": ".pdf",
-    "category": "建议收录",
-    "reason": "命中教材或答案关键词：solution",
+    "category": "需要人工判断",
+    "reason": "未命中明确规则",
     "approved": false
   },
   {
@@ -909,7 +909,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：worksheet",
-    "approved": false
+    "approved": true
   },
   {
     "source": "01大一/大一下/工程化学/untitled.fig",
@@ -957,7 +957,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中文件名：复习",
-    "approved": false
+    "approved": true
   },
   {
     "source": "01大一/大一下/工程化学/工化复习.pdf",
@@ -969,7 +969,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：复习",
-    "approved": false
+    "approved": true
   },
   {
     "source": "01大一/大一下/工程化学/工化帮扶5.22.pdf",
@@ -1029,7 +1029,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：answer",
-    "approved": false
+    "approved": true
   },
   {
     "source": "01大一/大一下/工程化学/Answers-20230604/4 Acid worksheet_answers.pdf",
@@ -1041,7 +1041,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：answer",
-    "approved": false
+    "approved": true
   },
   {
     "source": "01大一/大一下/工程化学/Answers-20230604/5 Kinetics exercises_solutions.pptx",
@@ -1065,7 +1065,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：answer",
-    "approved": false
+    "approved": true
   },
   {
     "source": "01大一/大一下/工程化学/Answers-20230604/7 Alcohols, Alkyl halides and Substitution Answers.pdf",
@@ -1077,7 +1077,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：answer",
-    "approved": false
+    "approved": true
   },
   {
     "source": "01大一/大一下/工程化学/Answers-20230604/8 Alkenes, Addition and Elimination.pdf",
@@ -1149,7 +1149,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：book",
-    "approved": false
+    "approved": true
   },
   {
     "source": "01大一/大一下/faith/Engineering logbook forms-20240603/Engineering logbook_attending a conference.docx",
@@ -1161,7 +1161,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：book",
-    "approved": false
+    "approved": true
   },
   {
     "source": "01大一/大一下/faith/Engineering logbook forms-20240603/Engineering logbook_attending a presentation.docx",
@@ -1173,7 +1173,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：book",
-    "approved": false
+    "approved": true
   },
   {
     "source": "01大一/大一下/faith/Engineering logbook forms-20240603/Engineering logbook_competition.docx",
@@ -1185,7 +1185,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：book",
-    "approved": false
+    "approved": true
   },
   {
     "source": "01大一/大一下/faith/Engineering logbook forms-20240603/Engineering logbook_giving a presentation.docx",
@@ -1197,7 +1197,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：book",
-    "approved": false
+    "approved": true
   },
   {
     "source": "01大一/大一下/faith/Engineering logbook forms-20240603/Engineering logbook_lab experiment.docx",
@@ -1209,7 +1209,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：book",
-    "approved": false
+    "approved": true
   },
   {
     "source": "01大一/大一下/faith/Engineering logbook forms-20240603/Engineering logbook_student representitive.docx",
@@ -1221,7 +1221,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：book",
-    "approved": false
+    "approved": true
   },
   {
     "source": "01大一/大一下/faith/Engineering logbook forms-20240603/Engineering logbook_training record.docx",
@@ -1233,7 +1233,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：book",
-    "approved": false
+    "approved": true
   },
   {
     "source": "01大一/大一下/faith/Engineering logbook forms-20240603/Engineering logbook_volunteering.docx",
@@ -1245,7 +1245,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：book",
-    "approved": false
+    "approved": true
   },
   {
     "source": "01大一/大一下/faith/Engineering logbook forms-20240603/Engineering logbook_winter_summer school.docx",
@@ -1257,7 +1257,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：book",
-    "approved": false
+    "approved": true
   },
   {
     "source": "01大一/大一下/faith/Engineering logbook forms-20240603/Engineering logbook_work experience diary.docx",
@@ -1269,7 +1269,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：book",
-    "approved": false
+    "approved": true
   },
   {
     "source": "01大一/大一下/faith/Engineering logbook forms-20240603/Engineering logbook_writing an article or report.docx",
@@ -1281,7 +1281,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：book",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/西方哲学史/从认识论到现代性：近代哲学的基本脉络与价值反思.doc",
@@ -1329,7 +1329,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：复习",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/习概/习思想资料 缩印 1w2字数.docx",
@@ -1461,7 +1461,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中文件名：report",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/材料化学/材料化学总复习.pdf",
@@ -1473,7 +1473,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：复习",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/材料化学/高分子化学-杨书豪.docx",
@@ -1497,7 +1497,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：answer",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/材料化学/CLHX/Answers Question Set 11 QXU4002 Redox and Electrochemistry.pdf",
@@ -1509,7 +1509,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：answer",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/材料化学/CLHX/Answers Question Set 2 Tg.pdf",
@@ -1521,7 +1521,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：answer",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/材料化学/CLHX/Answers Question Set 3 Type Polymerisations_Carothers_Kinetics step_growth.pdf",
@@ -1533,7 +1533,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：answer",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/材料化学/CLHX/Answers Question Set 4 Step_growth mechanisms.pdf",
@@ -1545,7 +1545,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：answer",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/材料化学/CLHX/Answers Question Set 5 Free radical polymerisation.pdf",
@@ -1557,7 +1557,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：answer",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/材料化学/CLHX/Answers Question Set 6 Free radical polymerisation and Chain Transfer.pdf",
@@ -1569,7 +1569,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：answer",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/材料化学/CLHX/Answers Question Set 7 Heterogeneous Polymerisation.pdf",
@@ -1581,7 +1581,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：answer",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/材料化学/CLHX/Answers Question Set 8 Copolymerisation.pdf",
@@ -1593,7 +1593,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：answer",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/材料化学/CLHX/Answers Question Set 9 QXU4002 Material Surface Functionalisation and MEMS Chemistry.pdf",
@@ -1605,7 +1605,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：answer",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/材料化学/CLHX/Answers Question set 10 QXU4002 Heterogeneous and Solid-State Kinetics.pdf",
@@ -1617,7 +1617,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：answer",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/材料化学/CLHX/Lecture Notes 1 Introduction_MW_Tg.pdf",
@@ -1845,7 +1845,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：answer",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/材料化学/Yasmin Chemistry For Material/Answers Question Set 2 Tg.pdf",
@@ -1857,7 +1857,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：answer",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/材料化学/Yasmin Chemistry For Material/Hazard symbols.pdf",
@@ -2181,7 +2181,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：笔记",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/材料化学/Yasmin Chemistry For Material/表.pdf",
@@ -2205,7 +2205,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中文件名：coursework",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/材料化学/材化Coursework/HS COSHH (中文（简体）).pptx",
@@ -2277,7 +2277,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：coursework",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/材料化学/材化Coursework/QXU4002 Chemistry for Materials Coursework Instructions.pdf",
@@ -2289,7 +2289,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：coursework",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/材料化学/材料化学Q&A/1.pdf",
@@ -2577,7 +2577,7 @@
     "suffix": ".pptx",
     "category": "建议收录",
     "reason": "命中文件名：presentation",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/工程设计方法/PPT2.0.pptx",
@@ -2637,7 +2637,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中文件名：report",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/工程设计方法/QXU4016_M5_Report_Smart bin2.docx",
@@ -2649,7 +2649,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中文件名：report",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/工程设计方法/QXU4016_S1_Week1_Lecture 2_Engineering _design process_LW-V3_23 (1).pdf",
@@ -2781,7 +2781,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：教材",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/MS1 结构与性能/Materials Science 1  Deformation and Failure Group Work of M17(1).pdf",
@@ -2985,7 +2985,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：solution",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/MS1 结构与性能/MS1/L8 (Lattices, unit cells and Crystal systems in 3D)_Examples with Solutions.pptx",
@@ -2997,7 +2997,7 @@
     "suffix": ".pptx",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：solution",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/MS1 结构与性能/MS1/L9 Interstitial sites, crystal coordinates, crystallographic directions and planes File.PPT",
@@ -3069,7 +3069,7 @@
     "suffix": ".pptx",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：solution",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/MS1 结构与性能/MS1 Group work/Failure of materials.pptx",
@@ -3093,7 +3093,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：report",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/MS1 结构与性能/MS1 Group work/Group work marking scheme (中文（简体）).pdf",
@@ -3129,7 +3129,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：poster",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/MS1 结构与性能/MS1 Group work/M4 Poster.pdf",
@@ -3141,7 +3141,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：poster",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/MS1 结构与性能/MS1 Group work/MS1 - Group reflection report (中文（简体）).docx",
@@ -3153,7 +3153,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中文件名：report",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/MS1 结构与性能/MS1 Group work/MS1 - Group reflection report.docx",
@@ -3165,7 +3165,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中文件名：report",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/MS1 结构与性能/材料学1 结构与性能/23 Phase diagrams_Part 1 - PDF.pdf",
@@ -3201,7 +3201,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：solution",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/MS1 结构与性能/材料学1 结构与性能/Dislocations motion and strengthening mechanisms (Examples with answers) - PDF (1).pdf",
@@ -3213,7 +3213,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：answer",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/MS1 结构与性能/材料学1 结构与性能/Dislocations motion and strengthening mechanisms (Examples with answers) - PDF.pdf",
@@ -3225,7 +3225,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：answer",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/MS1 结构与性能/材料学1 结构与性能/Failure of materials (Examples with solutions) - PDF.pdf",
@@ -3237,7 +3237,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：solution",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/MS1 结构与性能/材料学1 结构与性能/Failure of materials 2.pdf",
@@ -3273,7 +3273,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：solution",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/MS1 结构与性能/材料学1 结构与性能/Imperfections in solids TMJ-GV (Examples with solutions)_Final (2).pdf",
@@ -3285,7 +3285,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：solution",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/MS1 结构与性能/材料学1 结构与性能/Introduction to Materials Science module A22  TJM.pdf",
@@ -3405,7 +3405,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：answer",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/MS1 结构与性能/材料学1 结构与性能/Recovery, recrystallization and grain growth (Examples with answers) - PDF.pdf",
@@ -3417,7 +3417,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：answer",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/MS1 结构与性能/材料学1 结构与性能/Review.pdf",
@@ -3441,7 +3441,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：solution",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/MS1 结构与性能/材料学1 结构与性能/❄️Diffusion in Solids_Part 2 TMJ-GV (Examples with solutions).pdf",
@@ -3453,7 +3453,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：solution",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/MS1 结构与性能/材料学1 结构与性能/❄️Dislocations motion and strengthening mechanisms (Examples with answers) - PDF.pdf",
@@ -3465,7 +3465,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：answer",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/MS1 结构与性能/材料学1 结构与性能/❄️Stress-strain diagrams and mechanical properties (Examples with Solution) - PDF.pdf",
@@ -3477,7 +3477,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：solution",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/材料学实验1/ QXU4007 EXP1-2 Report M9.docx",
@@ -3489,7 +3489,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中文件名：report",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/材料学实验1/Coursework Marking sheet M9.docx",
@@ -3501,7 +3501,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中文件名：coursework",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/材料学实验1/M4 EXP1-4 Presentation.pptx",
@@ -3513,7 +3513,7 @@
     "suffix": ".pptx",
     "category": "建议收录",
     "reason": "命中文件名：presentation",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/材料学实验1/Materials Science 1  Deformation and Failure Group Work of M9.pptx",
@@ -3537,7 +3537,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中文件名：report",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/材料学实验1/report 1.docx",
@@ -3549,7 +3549,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中文件名：report",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/材料学实验1/crk/4-step notes P16.pdf",
@@ -3585,7 +3585,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：report",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/材料学实验1/crk/EXP1-5 GMM minutes P17.pdf",
@@ -3609,7 +3609,7 @@
     "suffix": ".pptx",
     "category": "建议收录",
     "reason": "命中文件名：poster",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/材料学实验1/crk/EXP1-5 User Requirements P17.pdf",
@@ -3633,7 +3633,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中文件名：report",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/材料学实验1/crk/QXU4007 EXP1-1 Part 1 Report P16.pdf",
@@ -3645,7 +3645,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：report",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/材料学实验1/crk/QXU4007 EXP1-2 Report P12.docx",
@@ -3657,7 +3657,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中文件名：report",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/材料学实验1/crk/QXU4007 EXP1-2 Report2 P12.pdf",
@@ -3669,7 +3669,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：report",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/材料学实验1/crk/QXU4007 EXP1-3 Bridge Report P13.pdf",
@@ -3681,7 +3681,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：report",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/材料学实验1/crk/QXU4007 EXP1-3 GMM minutes P13.pdf",
@@ -3729,7 +3729,7 @@
     "suffix": ".pptx",
     "category": "建议收录",
     "reason": "命中文件名：poster",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/材料学实验1/实验4/EXP1-4 Poster 4.0.pptx",
@@ -3741,7 +3741,7 @@
     "suffix": ".pptx",
     "category": "建议收录",
     "reason": "命中文件名：poster",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/材料学实验1/实验4/EXP1-4 User Requirements M11.docx",
@@ -3777,7 +3777,7 @@
     "suffix": ".pptx",
     "category": "建议收录",
     "reason": "命中文件名：poster",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/材料学实验1/实验4/EXPXXX Project Management Form XX.docx",
@@ -3801,7 +3801,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：poster",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/材料学实验1/实验4/QXU4016_M11_Poster.pptx",
@@ -3813,7 +3813,7 @@
     "suffix": ".pptx",
     "category": "建议收录",
     "reason": "命中文件名：poster",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/材料学实验1/实验4/绘图1.eddx",
@@ -3885,7 +3885,7 @@
     "suffix": ".xlsx",
     "category": "建议收录",
     "reason": "命中文件名：report",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/材料学实验1/材料学实验1/EXP1-1 – Round peg in a square hole.docx",
@@ -3909,7 +3909,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：report",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/材料学实验1/材料学实验1/实验.pdf",
@@ -4017,7 +4017,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中文件名：report",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/材料学实验1/材料学实验1/工材实验一/MS1 Poster and reflection P23.pdf",
@@ -4029,7 +4029,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：poster",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/材料学实验1/材料学实验1/工材实验一/Methods表格版本.docx",
@@ -4053,7 +4053,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中文件名：coursework",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/材料学实验1/材料学实验1/工材实验一/QXU4011 Experiment 2  writing your report v6(1).pptx",
@@ -4065,7 +4065,7 @@
     "suffix": ".pptx",
     "category": "建议收录",
     "reason": "命中文件名：report",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/材料学实验1/材料学实验1/工材实验一/Result看看这版对不对 zh.pdf",
@@ -4245,7 +4245,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：presentation",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/材料学实验1/材料学实验3--小车/M18 EXP1-3 Presentation.pptx",
@@ -4257,7 +4257,7 @@
     "suffix": ".pptx",
     "category": "建议收录",
     "reason": "命中文件名：presentation",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/材料学实验1/材料学实验3--小车/M18 EXP1-3 Presentation_20231121191556.pdf",
@@ -4269,7 +4269,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：presentation",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/材料学实验1/材料学实验3--小车/PPT中中文字样.png",
@@ -4305,7 +4305,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中文件名：report",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/材料学实验1/材料学实验3--小车/QXU4007 EXP1-3 Report_M18.pdf",
@@ -4317,7 +4317,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：report",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/材料学实验1/材料学实验3--小车/剩余雪糕棒处理.png",
@@ -4341,7 +4341,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中文件名：报告",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/材料学实验1/材料学实验3--小车/小车报告eng(1).docx",
@@ -4353,7 +4353,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中文件名：报告",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二上/材料学实验1/材料学实验3--小车/张韵怡家中笔筒.png",
@@ -5121,7 +5121,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：book",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/材料学2-加工与应用/Practice questions - cold working.pdf",
@@ -5253,7 +5253,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：book",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/材料学2-加工与应用/Week 12 - Electrical and Thermal Properties/QXU 4006 Module Assessment.pdf",
@@ -5505,7 +5505,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：data",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/材料学2-加工与应用/Week 2 - Properties, Processing and Applications of Metals 1/Exploring metal alloys - review of the literature.pdf",
@@ -5541,7 +5541,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中文件名：worksheet",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/材料学2-加工与应用/Week 2 - Properties, Processing and Applications of Metals 1/Metals and Alloys Worksheet 1.pdf",
@@ -5553,7 +5553,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：worksheet",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/材料学2-加工与应用/Week 2 - Properties, Processing and Applications of Metals 1/QXU4006 Week 2 - Introduction.pdf",
@@ -5613,7 +5613,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：worksheet",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/材料学2-加工与应用/Week 2 - Properties, Processing and Applications of Metals 1/Worksheet 1- Nichromes project instructions.pdf",
@@ -5625,7 +5625,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：worksheet",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/材料学2-加工与应用/Week 4 - Properties, Processing and Applications of Metals 2/QXU4006 Week 4 - Introduction.pdf",
@@ -6271,8 +6271,8 @@
     "course": "热力学与相变",
     "size": 1444208,
     "suffix": ".pdf",
-    "category": "建议收录",
-    "reason": "命中教材或答案关键词：solution",
+    "category": "需要人工判断",
+    "reason": "命中需人工判断关键词：chapter",
     "approved": false
   },
   {
@@ -6283,8 +6283,8 @@
     "course": "热力学与相变",
     "size": 964389,
     "suffix": ".pdf",
-    "category": "建议收录",
-    "reason": "命中教材或答案关键词：solution",
+    "category": "需要人工判断",
+    "reason": "命中需人工判断关键词：chapter",
     "approved": false
   },
   {
@@ -6297,7 +6297,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：作业",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/热力学与相变/热力学/17. Chapter 9 Part II. Section 6-8 The Behavior of Solutions-2020.04.21-kh.pdf",
@@ -6307,8 +6307,8 @@
     "course": "热力学与相变",
     "size": 920254,
     "suffix": ".pdf",
-    "category": "建议收录",
-    "reason": "命中教材或答案关键词：solution",
+    "category": "需要人工判断",
+    "reason": "命中需人工判断关键词：chapter",
     "approved": false
   },
   {
@@ -6319,8 +6319,8 @@
     "course": "热力学与相变",
     "size": 1067273,
     "suffix": ".pdf",
-    "category": "建议收录",
-    "reason": "命中教材或答案关键词：solution",
+    "category": "需要人工判断",
+    "reason": "命中需人工判断关键词：chapter",
     "approved": false
   },
   {
@@ -6403,8 +6403,8 @@
     "course": "热力学与相变",
     "size": 1082083,
     "suffix": ".pdf",
-    "category": "建议收录",
-    "reason": "命中教材或答案关键词：solution",
+    "category": "需要人工判断",
+    "reason": "命中需人工判断关键词：chapter",
     "approved": false
   },
   {
@@ -6415,8 +6415,8 @@
     "course": "热力学与相变",
     "size": 1395488,
     "suffix": ".pdf",
-    "category": "建议收录",
-    "reason": "命中教材或答案关键词：solution",
+    "category": "需要人工判断",
+    "reason": "命中需人工判断关键词：chapter",
     "approved": false
   },
   {
@@ -6427,8 +6427,8 @@
     "course": "热力学与相变",
     "size": 1987787,
     "suffix": ".pdf",
-    "category": "建议收录",
-    "reason": "命中教材或答案关键词：solution",
+    "category": "需要人工判断",
+    "reason": "命中需人工判断关键词：chapter",
     "approved": false
   },
   {
@@ -6465,7 +6465,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：笔记",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/热力学与相变/热力学/热力学与相变第十一章.pdf",
@@ -6501,7 +6501,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：答案",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/热力学与相变/热力学/热力学第七章.pdf",
@@ -6705,7 +6705,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中文件名：report",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/工程力学/Report on four link deformable wing_M2.docx",
@@ -6717,7 +6717,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中文件名：report",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/工程力学/四连杆poster.pptx",
@@ -6729,7 +6729,7 @@
     "suffix": ".pptx",
     "category": "建议收录",
     "reason": "命中文件名：poster",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/工程力学/材料力学报告.docx",
@@ -6741,7 +6741,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中文件名：报告",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/工程力学/材料力学整理.docx",
@@ -6777,7 +6777,7 @@
     "suffix": ".xlsx",
     "category": "建议收录",
     "reason": "命中文件名：data",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/材料学实验2/2-1/EXP2-1 Instructions 24B (中文（简体）).pdf",
@@ -6825,7 +6825,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：report",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/材料学实验2/2-1/EXP2-1 Report Marking Criteria 24B.pdf",
@@ -6837,7 +6837,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：report",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/材料学实验2/2-1/EXP2-1 Same or Different Introduction Part1 24B (中文（简体）).pdf",
@@ -6933,7 +6933,7 @@
     "suffix": ".xlsx",
     "category": "建议收录",
     "reason": "命中文件名：data",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/材料学实验2/2-1/Raw data files-20250302.zip",
@@ -6945,7 +6945,7 @@
     "suffix": ".zip",
     "category": "建议收录",
     "reason": "命中文件名：data",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/材料学实验2/2-1/UNTITLED (1).opju",
@@ -7137,7 +7137,7 @@
     "suffix": ".xlsx",
     "category": "建议收录",
     "reason": "命中文件名：data",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/材料学实验2/2-1/EXP-1/QXU5017 EXP2-1 Report P3.docx",
@@ -7149,7 +7149,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中文件名：report",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/材料学实验2/2-1/EXP-1/QXU5017 EXP2-1 Report P3.pdf",
@@ -7161,7 +7161,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：report",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/材料学实验2/2-1/EXP-1/SAMPLEB.png",
@@ -7221,7 +7221,7 @@
     "suffix": ".xlsx",
     "category": "建议收录",
     "reason": "命中文件名：data",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/材料学实验2/2-1/EXP-1/[SE]Unmodified Sylgard 184 Polymer samples data.xlsx",
@@ -7233,7 +7233,7 @@
     "suffix": ".xlsx",
     "category": "建议收录",
     "reason": "命中文件名：data",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/材料学实验2/2-1/EXP-1/[SE]Urefil-3 modified Sylgard 184 data for both Programmes.xlsx",
@@ -7245,7 +7245,7 @@
     "suffix": ".xlsx",
     "category": "建议收录",
     "reason": "命中文件名：data",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/材料学实验2/2-1/EXP-1/polymer(1).xlsx",
@@ -7269,7 +7269,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中文件名：report",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/材料学实验2/2-1/EXP-1/qxu5017 exp2-1 report p2.docx",
@@ -7281,7 +7281,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中文件名：report",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/材料学实验2/2-1/EXP-1/sAMPLEA.png",
@@ -7353,7 +7353,7 @@
     "suffix": ".xlsx",
     "category": "建议收录",
     "reason": "命中文件名：data",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/材料学实验2/2-1/Raw data files-20250219/QXU5017 EXP2-1 Data XX (Template).xlsx",
@@ -7365,7 +7365,7 @@
     "suffix": ".xlsx",
     "category": "建议收录",
     "reason": "命中文件名：data",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/材料学实验2/2-1/Raw data files-20250302/EXP2-1 Raw Datasheet.xlsx",
@@ -7377,7 +7377,7 @@
     "suffix": ".xlsx",
     "category": "建议收录",
     "reason": "命中文件名：data",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/材料学实验2/2-1/Raw data files-20250302/QXU5017 EXP2-1 Data XX (Template).xlsx",
@@ -7389,7 +7389,7 @@
     "suffix": ".xlsx",
     "category": "建议收录",
     "reason": "命中文件名：data",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/材料学实验2/2-2/EXP2- Report zh.docx",
@@ -7401,7 +7401,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中文件名：report",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/材料学实验2/2-2/EXP2-2 Experimental Plan M9.pdf",
@@ -7545,7 +7545,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：report",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/材料学实验2/2-2/EXP2-2 Report Marking Criteria 24B.pdf",
@@ -7557,7 +7557,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：report",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/材料学实验2/2-2/EXP2-2 Twists and Turns Part 2 Report M14 (1) zh.pdf",
@@ -7569,7 +7569,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：report",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/材料学实验2/2-2/QXU5017 EXP2-2 Data M9.xlsx",
@@ -7581,7 +7581,7 @@
     "suffix": ".xlsx",
     "category": "建议收录",
     "reason": "命中文件名：data",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/材料学实验2/2-2/QXU5017 EXP2-2 Part 1 Plan M14 zh.pdf",
@@ -7617,7 +7617,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：report",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/材料学实验2/2-2/QXU5017 EXP2-2 Part 2 Report M9.docx",
@@ -7629,7 +7629,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中文件名：report",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/材料学实验2/2-2/QXU5017 EXP2-2 Part 2 Report M9.pdf",
@@ -7641,7 +7641,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：report",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/材料学实验2/2-2/lnA0:An.py",
@@ -7689,7 +7689,7 @@
     "suffix": ".xlsx",
     "category": "建议收录",
     "reason": "命中文件名：工作簿",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/材料学实验2/2-3/EXP2-3 raw data for Group B.xlsx",
@@ -7701,7 +7701,7 @@
     "suffix": ".xlsx",
     "category": "建议收录",
     "reason": "命中文件名：data",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/材料学实验2/2-3/Poster-flexible strain sensor arrays-M6-TeamB.pdf",
@@ -7713,7 +7713,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：poster",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/材料学实验2/2-3/logbook EXP2-3 M6 team B.docx",
@@ -7725,7 +7725,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：book",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/材料学实验2/2-4/EXP2-4 Experimental Data - Rubber 4252.xlsx",
@@ -7737,7 +7737,7 @@
     "suffix": ".xlsx",
     "category": "建议收录",
     "reason": "命中文件名：data",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/材料学实验2/2-4/EXP2-4 Part1 Instructions 24B zh.pdf",
@@ -7845,7 +7845,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：report",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/材料学实验2/2-4/EXP2-4 Report Marking Criteria 24B.pdf",
@@ -7857,7 +7857,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：report",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/材料学实验2/2-4/QXU5017 EXP 2-4 Part 2  Report P7 zh.pdf",
@@ -7869,7 +7869,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：report",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/材料学实验2/2-4/QXU5017 EXP 2-4 Part 2  Report P7.pdf",
@@ -7881,7 +7881,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：report",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/材料学实验2/2-4/QXU5017 EXP2-3 Part 2 Report M18 zh.pdf",
@@ -7893,7 +7893,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：report",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/材料学实验2/2-4/QXU5017 EXP2-3 Part 2 Report M18.pdf",
@@ -7905,7 +7905,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：report",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/材料学实验2/2-4/QXU5017 EXP2-4 Part 1 Plan M1.docx",
@@ -7941,7 +7941,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：report",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/材料学实验2/2-4/QXU5017 EXP2-4 Part 2 Report M1.docx",
@@ -7953,7 +7953,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中文件名：report",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/材料学实验2/2-4/QXU5017 EXP2-4 Part 2 Report M1.pdf",
@@ -7965,7 +7965,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：report",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/材料学实验2/2-4/QXU5017 EXP2-4 Part 2 Report M3 zh.pdf",
@@ -7977,7 +7977,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：report",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/材料学实验2/2-4/QXU5017 EXP2-4 Part 2 Report M3.pdf",
@@ -7989,7 +7989,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：report",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/中共党史/中国共产党领导下“两弹一星”工程的战略决策与实践路径探究.docx",
@@ -8037,7 +8037,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：coursework",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/MS2/Further Guidelines on  Coursework Requirements.pdf",
@@ -8049,7 +8049,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：coursework",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/MS2/QXU4006 Updated Coursework Guideline zh.pdf",
@@ -8061,7 +8061,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：coursework",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/MS2/QXU4006 Updated Coursework Guideline.pdf",
@@ -8073,7 +8073,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：coursework",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/MS2/QXU4006_B24_M9.docx",
@@ -8469,7 +8469,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：solution",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/MS2/MS2/23 revision.pdf",
@@ -9441,7 +9441,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：复习",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/毛概/概论课社会实践报告册 (1).doc",
@@ -9453,7 +9453,7 @@
     "suffix": ".doc",
     "category": "建议收录",
     "reason": "命中文件名：报告",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/毛概/毛概期末复习(1).pdf",
@@ -9465,7 +9465,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：复习",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/毛概/毛泽东思想概论报告_第十组.docx",
@@ -9477,7 +9477,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中文件名：报告",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/毛概/毛泽东思想概论报告_第十组.pdf",
@@ -9489,7 +9489,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：报告",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/毛概/西北工业大学总师精神传播实践研究报告.pptx",
@@ -9501,7 +9501,7 @@
     "suffix": ".pptx",
     "category": "建议收录",
     "reason": "命中文件名：报告",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/物理化学/1-绪论+第一定律1.pdf",
@@ -9549,7 +9549,7 @@
     "suffix": ".pptx",
     "category": "建议收录",
     "reason": "命中文件名：poster",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/faith/PES2_Marking Criteria_ Materials Library_Poster 2025.docx",
@@ -9561,7 +9561,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中文件名：poster",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/faith/PPTT2.0.pptx",
@@ -9585,7 +9585,7 @@
     "suffix": ".pptx",
     "category": "建议收录",
     "reason": "命中文件名：poster",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/faith/QXU4112_Poster M50.pdf",
@@ -9597,7 +9597,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：poster",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/faith/QXU4112_Poster M50.pptx",
@@ -9609,7 +9609,7 @@
     "suffix": ".pptx",
     "category": "建议收录",
     "reason": "命中文件名：poster",
-    "approved": false
+    "approved": true
   },
   {
     "source": "02大二/大二下/faith/Untitled ACS Document 1996-1.cdxml",
@@ -9705,7 +9705,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中文件名：复习",
-    "approved": false
+    "approved": true
   },
   {
     "source": "03大三上/马原/马原（一二章；三章；四+五）-2.pdf",
@@ -10077,7 +10077,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：book",
-    "approved": false
+    "approved": true
   },
   {
     "source": "03大三上/2025表面与界面/表界面复习题/QXU5010 2022 Resit Exam.pdf",
@@ -10113,7 +10113,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：book",
-    "approved": false
+    "approved": true
   },
   {
     "source": "03大三上/2025表面与界面/表界面报告/12.5表界面.pdf",
@@ -10149,7 +10149,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：coursework",
-    "approved": false
+    "approved": true
   },
   {
     "source": "03大三上/2025表面与界面/表界面报告/QXU5010 Coursework Instructions.pdf",
@@ -10161,7 +10161,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：coursework",
-    "approved": false
+    "approved": true
   },
   {
     "source": "03大三上/2025表面与界面/表界面报告/三种表面结构.cdx",
@@ -10257,7 +10257,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：answer",
-    "approved": false
+    "approved": true
   },
   {
     "source": "03大三上/2025表面与界面/题/QXU5010 - ICT2.pdf",
@@ -10281,7 +10281,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：answer",
-    "approved": false
+    "approved": true
   },
   {
     "source": "03大三上/2025表面与界面/题/QXU5010 - ICT3.pdf",
@@ -10329,7 +10329,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：book",
-    "approved": false
+    "approved": true
   },
   {
     "source": "03大三上/表界面/QXU5010 - Chapter 1 - Introduction.pdf",
@@ -10531,8 +10531,8 @@
     "course": "结构表征",
     "size": 3400675,
     "suffix": ".pdf",
-    "category": "需要人工判断",
-    "reason": "未命中明确规则",
+    "category": "建议排除",
+    "reason": "命中明确课件关键词：学时",
     "approved": false
   },
   {
@@ -10543,8 +10543,8 @@
     "course": "结构表征",
     "size": 4173120,
     "suffix": ".pdf",
-    "category": "需要人工判断",
-    "reason": "未命中明确规则",
+    "category": "建议排除",
+    "reason": "命中明确课件关键词：学时",
     "approved": false
   },
   {
@@ -10555,8 +10555,8 @@
     "course": "结构表征",
     "size": 7236795,
     "suffix": ".pdf",
-    "category": "需要人工判断",
-    "reason": "未命中明确规则",
+    "category": "建议排除",
+    "reason": "命中明确课件关键词：学时",
     "approved": false
   },
   {
@@ -10567,8 +10567,8 @@
     "course": "结构表征",
     "size": 2602620,
     "suffix": ".pdf",
-    "category": "需要人工判断",
-    "reason": "未命中明确规则",
+    "category": "建议排除",
+    "reason": "命中明确课件关键词：学时",
     "approved": false
   },
   {
@@ -10579,8 +10579,8 @@
     "course": "结构表征",
     "size": 3901389,
     "suffix": ".pdf",
-    "category": "需要人工判断",
-    "reason": "未命中明确规则",
+    "category": "建议排除",
+    "reason": "命中明确课件关键词：学时",
     "approved": false
   },
   {
@@ -10591,8 +10591,8 @@
     "course": "结构表征",
     "size": 4719744,
     "suffix": ".pdf",
-    "category": "需要人工判断",
-    "reason": "未命中明确规则",
+    "category": "建议排除",
+    "reason": "命中明确课件关键词：学时",
     "approved": false
   },
   {
@@ -10603,8 +10603,8 @@
     "course": "结构表征",
     "size": 4425660,
     "suffix": ".pdf",
-    "category": "需要人工判断",
-    "reason": "未命中明确规则",
+    "category": "建议排除",
+    "reason": "命中明确课件关键词：学时",
     "approved": false
   },
   {
@@ -10627,8 +10627,8 @@
     "course": "结构表征",
     "size": 5502602,
     "suffix": ".pdf",
-    "category": "需要人工判断",
-    "reason": "未命中明确规则",
+    "category": "建议排除",
+    "reason": "命中明确课件关键词：学时",
     "approved": false
   },
   {
@@ -10639,8 +10639,8 @@
     "course": "结构表征",
     "size": 7821751,
     "suffix": ".pptx",
-    "category": "需要人工判断",
-    "reason": "未命中明确规则",
+    "category": "建议排除",
+    "reason": "命中明确课件关键词：学时",
     "approved": false
   },
   {
@@ -10737,7 +10737,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中文件名：报告",
-    "approved": false
+    "approved": true
   },
   {
     "source": "03大三上/2025结构表征/严启龙报告/5-张雨琛组-结构表征实验报告.pdf",
@@ -10749,7 +10749,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：报告",
-    "approved": false
+    "approved": true
   },
   {
     "source": "03大三上/2025结构表征/严启龙报告/95-100-刘雨昕_模范实验报告.pdf",
@@ -10761,7 +10761,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：报告",
-    "approved": false
+    "approved": true
   },
   {
     "source": "03大三上/2025结构表征/严启龙报告/95-98-胡钦源组_模范实验报告.pdf",
@@ -10773,7 +10773,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：报告",
-    "approved": false
+    "approved": true
   },
   {
     "source": "03大三上/2025结构表征/严启龙报告/20201211/A1.CSV",
@@ -12933,7 +12933,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中文件名：报告",
-    "approved": false
+    "approved": true
   },
   {
     "source": "03大三上/2025结构表征/结构表征实验报告/结构表征实验报告模版-SEM.pdf",
@@ -12945,7 +12945,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：报告",
-    "approved": false
+    "approved": true
   },
   {
     "source": "03大三上/2025结构表征/结构表征实验报告/结构表征实验报告模版-TEM.docx",
@@ -12957,7 +12957,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中文件名：报告",
-    "approved": false
+    "approved": true
   },
   {
     "source": "03大三上/2025结构表征/结构表征实验报告/结构表征实验报告模版-TEM.pdf",
@@ -12969,7 +12969,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：报告",
-    "approved": false
+    "approved": true
   },
   {
     "source": "03大三上/2025结构表征/结构表征实验报告/结构表征实验报告模版-XRD.docx",
@@ -12981,7 +12981,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中文件名：报告",
-    "approved": false
+    "approved": true
   },
   {
     "source": "03大三上/2025结构表征/结构表征实验报告/结构表征实验报告模版-XRD.pdf",
@@ -12993,7 +12993,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：报告",
-    "approved": false
+    "approved": true
   },
   {
     "source": "03大三上/2025结构表征/结构表征实验报告/车轩铭 2323304252.docx",
@@ -13291,8 +13291,8 @@
     "course": "结构表征",
     "size": 5739633,
     "suffix": ".pptx",
-    "category": "需要人工判断",
-    "reason": "未命中明确规则",
+    "category": "建议排除",
+    "reason": "命中明确课件关键词：学时",
     "approved": false
   },
   {
@@ -13303,8 +13303,8 @@
     "course": "结构表征",
     "size": 7209574,
     "suffix": ".pptx",
-    "category": "建议收录",
-    "reason": "命中文件名：data",
+    "category": "建议排除",
+    "reason": "命中明确课件关键词：学时",
     "approved": false
   },
   {
@@ -13315,8 +13315,8 @@
     "course": "结构表征",
     "size": 2372583,
     "suffix": ".pptx",
-    "category": "需要人工判断",
-    "reason": "未命中明确规则",
+    "category": "建议排除",
+    "reason": "命中明确课件关键词：学时",
     "approved": false
   },
   {
@@ -13327,8 +13327,8 @@
     "course": "结构表征",
     "size": 6085277,
     "suffix": ".pptx",
-    "category": "需要人工判断",
-    "reason": "未命中明确规则",
+    "category": "建议排除",
+    "reason": "命中明确课件关键词：学时",
     "approved": false
   },
   {
@@ -13339,8 +13339,8 @@
     "course": "结构表征",
     "size": 10063955,
     "suffix": ".pptx",
-    "category": "需要人工判断",
-    "reason": "未命中明确规则",
+    "category": "建议排除",
+    "reason": "命中明确课件关键词：学时",
     "approved": false
   },
   {
@@ -13351,8 +13351,8 @@
     "course": "结构表征",
     "size": 5548684,
     "suffix": ".pptx",
-    "category": "需要人工判断",
-    "reason": "未命中明确规则",
+    "category": "建议排除",
+    "reason": "命中明确课件关键词：学时",
     "approved": false
   },
   {
@@ -13413,7 +13413,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：answer",
-    "approved": false
+    "approved": true
   },
   {
     "source": "03大三上/结构表征/Answer- TEM & SEM contrast.docx",
@@ -13425,7 +13425,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：answer",
-    "approved": false
+    "approved": true
   },
   {
     "source": "03大三上/结构表征/Answer- Thinking in reciprocal lattice.docx",
@@ -13437,7 +13437,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：answer",
-    "approved": false
+    "approved": true
   },
   {
     "source": "03大三上/结构表征/Homework- Physics of X-ray(1).docx",
@@ -13449,7 +13449,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中文件名：homework",
-    "approved": false
+    "approved": true
   },
   {
     "source": "03大三上/结构表征/结构表征.pdf",
@@ -13605,7 +13605,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：solution",
-    "approved": false
+    "approved": true
   },
   {
     "source": "03大三上/2025金属/Tutorial.pdf",
@@ -13833,7 +13833,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中文件名：report",
-    "approved": false
+    "approved": true
   },
   {
     "source": "03大三上/2025金属/Metal report/LAB 1 - Lab report tamplate.pdf",
@@ -13845,7 +13845,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：report",
-    "approved": false
+    "approved": true
   },
   {
     "source": "03大三上/2025金属/Metal report/LAB 1 - Methodology.pptx",
@@ -13881,7 +13881,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中文件名：report",
-    "approved": false
+    "approved": true
   },
   {
     "source": "03大三上/2025金属/Metal report/LAB 2&3 - Lab report tamplate.pdf",
@@ -13893,7 +13893,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：report",
-    "approved": false
+    "approved": true
   },
   {
     "source": "03大三上/2025金属/Metal report/LAB 3 - Guidelines for experiement.pdf",
@@ -14505,7 +14505,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：answer",
-    "approved": false
+    "approved": true
   },
   {
     "source": "03大三上/2025高分子物理/ppt总.pdf",
@@ -14529,7 +14529,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：复习",
-    "approved": false
+    "approved": true
   },
   {
     "source": "03大三上/2025高分子物理/高物选择题.docx",
@@ -14553,7 +14553,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中文件名：coursework",
-    "approved": false
+    "approved": true
   },
   {
     "source": "03大三上/2025高分子物理/PPP Presentation/COURSEWORK PPP.docx",
@@ -14565,7 +14565,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中文件名：coursework",
-    "approved": false
+    "approved": true
   },
   {
     "source": "03大三上/2025高分子物理/PPP Presentation/GROUP ESSAY PPP 2024-2025 zh-Hans.pdf",
@@ -14601,7 +14601,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：presentation",
-    "approved": false
+    "approved": true
   },
   {
     "source": "03大三上/2025高分子物理/PPP Presentation/GROUP Presentation Assessment(2).pdf",
@@ -14613,7 +14613,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：presentation",
-    "approved": false
+    "approved": true
   },
   {
     "source": "03大三上/2025高分子物理/PPP Presentation/M10_The Application of Polymer Physics in Drug Delivery.pptx",
@@ -14661,7 +14661,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：presentation",
-    "approved": false
+    "approved": true
   },
   {
     "source": "03大三上/2025高分子物理/PPP Presentation/M3_QXU5032_Polymer Physics Presentation Assessment(1).pdf",
@@ -14673,7 +14673,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：presentation",
-    "approved": false
+    "approved": true
   },
   {
     "source": "03大三上/2025高分子物理/PPP Presentation/Polymer Physics Presentation Assessment.pdf",
@@ -14685,7 +14685,7 @@
     "suffix": ".pdf",
     "category": "建议收录",
     "reason": "命中文件名：presentation",
-    "approved": false
+    "approved": true
   },
   {
     "source": "03大三上/2025高分子物理/PPP Presentation/pre稿子.docx",
@@ -14817,7 +14817,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中文件名：report",
-    "approved": false
+    "approved": true
   },
   {
     "source": "03大三上/2025高分子物理/圣遗物/3. Polymer Structure notes.pdf",
@@ -14997,7 +14997,7 @@
     "suffix": ".docx",
     "category": "建议收录",
     "reason": "命中教材或答案关键词：answer",
-    "approved": false
+    "approved": true
   },
   {
     "source": "03大三上/2025高分子物理/高物复习题/MOCK EXAM NOV 2025.docx",

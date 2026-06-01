@@ -2,17 +2,85 @@
   {
     "semester": "大一上",
     "course": "英语课",
-    "files": []
+    "files": [
+      {
+        "path": "大一上/英语课/Listening Practice 1 WORKSHEET - A 30-Day Challenge.docx",
+        "size": 22306,
+        "suffix": ".docx"
+      }
+    ]
   },
   {
     "semester": "大一上",
     "course": "faith",
-    "files": []
+    "files": [
+      {
+        "path": "大一上/faith/ Car车轩铭_2023304252_PES1 Engineering Logbook Work Record.docx",
+        "size": 665422,
+        "suffix": ".docx"
+      },
+      {
+        "path": "大一上/faith/Engineering logbook_attending a presentation.docx",
+        "size": 43297,
+        "suffix": ".docx"
+      },
+      {
+        "path": "大一上/faith/PES1_S1_L11_In-class worksheet.docx",
+        "size": 18983,
+        "suffix": ".docx"
+      },
+      {
+        "path": "大一上/faith/PES1_S1_L5_Worksheet.docx",
+        "size": 505406,
+        "suffix": ".docx"
+      },
+      {
+        "path": "大一上/faith/PES1_S1_L7_Critical thinking Worksheet.docx",
+        "size": 15146,
+        "suffix": ".docx"
+      },
+      {
+        "path": "大一上/faith/QM-preview and report template for Young's modulus of steel wire.doc",
+        "size": 57856,
+        "suffix": ".doc"
+      }
+    ]
   },
   {
     "semester": "大一上",
     "course": "公共教材与答案",
-    "files": []
+    "files": [
+      {
+        "path": "大一上/公共教材与答案/George B. Thomas, Maurice D. Weir, Joel Hass, Frank R. Giordano-Thomas' Calculus, 11th Edition-Addison Wesley (2004).pdf",
+        "size": 23948851,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大一上/公共教材与答案/大学物理学 第3版 (Douglas C. Giancoli 滕小瑛) 课后答案[1-45章].khdaw.pdf",
+        "size": 76895972,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大一上/公共教材与答案/思想道德与法治2023年版电子版教材.pdf",
+        "size": 32225353,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大一上/公共教材与答案/托马斯微积分习题答案.pdf",
+        "size": 17645019,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大一上/公共教材与答案/托马斯微积分第十四版Joel R. Hass, Christopher D. Heil, Maurice D. Weir - Thomas’ Calculus (2017, Pearson) - li.pdf",
+        "size": 28040989,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大一上/公共教材与答案/数学分析.pdf",
+        "size": 75504226,
+        "suffix": ".pdf"
+      }
+    ]
   },
   {
     "semester": "大一下",
@@ -252,7 +320,68 @@
   {
     "semester": "大一下",
     "course": "faith",
-    "files": []
+    "files": [
+      {
+        "path": "大一下/faith/2023304252_QXU3112_Engineering logbook work record form.docx",
+        "size": 59180,
+        "suffix": ".docx"
+      },
+      {
+        "path": "大一下/faith/Engineering logbook forms-20240603/Engineering logbook_attending a conference.docx",
+        "size": 40314,
+        "suffix": ".docx"
+      },
+      {
+        "path": "大一下/faith/Engineering logbook forms-20240603/Engineering logbook_attending a presentation.docx",
+        "size": 41242,
+        "suffix": ".docx"
+      },
+      {
+        "path": "大一下/faith/Engineering logbook forms-20240603/Engineering logbook_competition.docx",
+        "size": 41376,
+        "suffix": ".docx"
+      },
+      {
+        "path": "大一下/faith/Engineering logbook forms-20240603/Engineering logbook_giving a presentation.docx",
+        "size": 40126,
+        "suffix": ".docx"
+      },
+      {
+        "path": "大一下/faith/Engineering logbook forms-20240603/Engineering logbook_lab experiment.docx",
+        "size": 66292,
+        "suffix": ".docx"
+      },
+      {
+        "path": "大一下/faith/Engineering logbook forms-20240603/Engineering logbook_student representitive.docx",
+        "size": 41166,
+        "suffix": ".docx"
+      },
+      {
+        "path": "大一下/faith/Engineering logbook forms-20240603/Engineering logbook_training record.docx",
+        "size": 40139,
+        "suffix": ".docx"
+      },
+      {
+        "path": "大一下/faith/Engineering logbook forms-20240603/Engineering logbook_volunteering.docx",
+        "size": 40271,
+        "suffix": ".docx"
+      },
+      {
+        "path": "大一下/faith/Engineering logbook forms-20240603/Engineering logbook_winter_summer school.docx",
+        "size": 38721,
+        "suffix": ".docx"
+      },
+      {
+        "path": "大一下/faith/Engineering logbook forms-20240603/Engineering logbook_work experience diary.docx",
+        "size": 43096,
+        "suffix": ".docx"
+      },
+      {
+        "path": "大一下/faith/Engineering logbook forms-20240603/Engineering logbook_writing an article or report.docx",
+        "size": 40088,
+        "suffix": ".docx"
+      }
+    ]
   },
   {
     "semester": "大二上",
@@ -267,27 +396,402 @@
   {
     "semester": "大二上",
     "course": "习概",
-    "files": []
+    "files": [
+      {
+        "path": "大二上/习概/《新思想概论》复习大纲.pdf",
+        "size": 904194,
+        "suffix": ".pdf"
+      }
+    ]
   },
   {
     "semester": "大二上",
     "course": "材料化学",
-    "files": []
+    "files": [
+      {
+        "path": "大二上/材料化学/CLHX/Answers Question Set 1 MW.pdf",
+        "size": 677418,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大二上/材料化学/CLHX/Answers Question Set 11 QXU4002 Redox and Electrochemistry.pdf",
+        "size": 586657,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大二上/材料化学/CLHX/Answers Question Set 2 Tg.pdf",
+        "size": 589597,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大二上/材料化学/CLHX/Answers Question Set 3 Type Polymerisations_Carothers_Kinetics step_growth.pdf",
+        "size": 568615,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大二上/材料化学/CLHX/Answers Question Set 4 Step_growth mechanisms.pdf",
+        "size": 1393956,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大二上/材料化学/CLHX/Answers Question Set 5 Free radical polymerisation.pdf",
+        "size": 1120169,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大二上/材料化学/CLHX/Answers Question Set 6 Free radical polymerisation and Chain Transfer.pdf",
+        "size": 564420,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大二上/材料化学/CLHX/Answers Question Set 7 Heterogeneous Polymerisation.pdf",
+        "size": 569158,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大二上/材料化学/CLHX/Answers Question Set 8 Copolymerisation.pdf",
+        "size": 559362,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大二上/材料化学/CLHX/Answers Question Set 9 QXU4002 Material Surface Functionalisation and MEMS Chemistry.pdf",
+        "size": 516554,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大二上/材料化学/CLHX/Answers Question set 10 QXU4002 Heterogeneous and Solid-State Kinetics.pdf",
+        "size": 335574,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大二上/材料化学/Yasmin Chemistry For Material/Answers Question Set 1 MW.pdf",
+        "size": 740541,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大二上/材料化学/Yasmin Chemistry For Material/Answers Question Set 2 Tg.pdf",
+        "size": 1213523,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大二上/材料化学/Yasmin Chemistry For Material/Yamin2023笔记.pdf",
+        "size": 26432281,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大二上/材料化学/材化Coursework/Coursework Marking sheet.docx",
+        "size": 39194,
+        "suffix": ".docx"
+      },
+      {
+        "path": "大二上/材料化学/材化Coursework/QXU4002 Chemistry for Materials Coursework Instructions (中文（简体）).pdf",
+        "size": 550213,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大二上/材料化学/材化Coursework/QXU4002 Chemistry for Materials Coursework Instructions.pdf",
+        "size": 169505,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大二上/材料化学/材化report 1.docx",
+        "size": 800063,
+        "suffix": ".docx"
+      },
+      {
+        "path": "大二上/材料化学/材料化学总复习.pdf",
+        "size": 28896544,
+        "suffix": ".pdf"
+      }
+    ]
   },
   {
     "semester": "大二上",
     "course": "工程设计方法",
-    "files": []
+    "files": [
+      {
+        "path": "大二上/工程设计方法/M5 presentation.pptx",
+        "size": 20938163,
+        "suffix": ".pptx"
+      },
+      {
+        "path": "大二上/工程设计方法/QXU4016_M5_Report_Smart bin.docx",
+        "size": 10451317,
+        "suffix": ".docx"
+      },
+      {
+        "path": "大二上/工程设计方法/QXU4016_M5_Report_Smart bin2.docx",
+        "size": 8663612,
+        "suffix": ".docx"
+      },
+      {
+        "path": "大二上/工程设计方法/主要教材MGH_Engineering_Design_5th_Edition.pdf",
+        "size": 29497915,
+        "suffix": ".pdf"
+      }
+    ]
   },
   {
     "semester": "大二上",
     "course": "MS1 结构与性能",
-    "files": []
+    "files": [
+      {
+        "path": "大二上/MS1 结构与性能/MS1 Group work/Failure of materials (Examples with solutions).pptx",
+        "size": 11924074,
+        "suffix": ".pptx"
+      },
+      {
+        "path": "大二上/MS1 结构与性能/MS1 Group work/Group reflection report_Example.pdf",
+        "size": 75040,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大二上/MS1 结构与性能/MS1 Group work/M4 Poster (中文（简体）).pdf",
+        "size": 908800,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大二上/MS1 结构与性能/MS1 Group work/M4 Poster.pdf",
+        "size": 527566,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大二上/MS1 结构与性能/MS1 Group work/MS1 - Group reflection report (中文（简体）).docx",
+        "size": 19320,
+        "suffix": ".docx"
+      },
+      {
+        "path": "大二上/MS1 结构与性能/MS1 Group work/MS1 - Group reflection report.docx",
+        "size": 20326,
+        "suffix": ".docx"
+      },
+      {
+        "path": "大二上/MS1 结构与性能/MS1/L8 (Lattices, unit cells and Crystal systems in 3D)_Examples with Solutions.pdf",
+        "size": 1305516,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大二上/MS1 结构与性能/MS1/L8 (Lattices, unit cells and Crystal systems in 3D)_Examples with Solutions.pptx",
+        "size": 3584496,
+        "suffix": ".pptx"
+      },
+      {
+        "path": "大二上/MS1 结构与性能/材料学1 结构与性能/Diffusion in Solids_Part 1 TMJ-GV (Examples with solutions).pdf",
+        "size": 1537796,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大二上/MS1 结构与性能/材料学1 结构与性能/Dislocations motion and strengthening mechanisms (Examples with answers) - PDF (1).pdf",
+        "size": 3743140,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大二上/MS1 结构与性能/材料学1 结构与性能/Dislocations motion and strengthening mechanisms (Examples with answers) - PDF.pdf",
+        "size": 3891161,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大二上/MS1 结构与性能/材料学1 结构与性能/Failure of materials (Examples with solutions) - PDF.pdf",
+        "size": 4726906,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大二上/MS1 结构与性能/材料学1 结构与性能/Imperfections in solids (Examples with solutions)_Final.pdf",
+        "size": 4300174,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大二上/MS1 结构与性能/材料学1 结构与性能/Imperfections in solids TMJ-GV (Examples with solutions)_Final (2).pdf",
+        "size": 10322125,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大二上/MS1 结构与性能/材料学1 结构与性能/Recovery, recrystallization and grain growth (Examples with answers) - PDF (1).pdf",
+        "size": 1220958,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大二上/MS1 结构与性能/材料学1 结构与性能/Recovery, recrystallization and grain growth (Examples with answers) - PDF.pdf",
+        "size": 1345639,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大二上/MS1 结构与性能/材料学1 结构与性能/❄️Diffusion in Solids_Part 1 TMJ-GV (Examples with solutions) (1).pdf",
+        "size": 2272087,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大二上/MS1 结构与性能/材料学1 结构与性能/❄️Diffusion in Solids_Part 2 TMJ-GV (Examples with solutions).pdf",
+        "size": 2945714,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大二上/MS1 结构与性能/材料学1 结构与性能/❄️Dislocations motion and strengthening mechanisms (Examples with answers) - PDF.pdf",
+        "size": 3771614,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大二上/MS1 结构与性能/材料学1 结构与性能/❄️Stress-strain diagrams and mechanical properties (Examples with Solution) - PDF.pdf",
+        "size": 1092114,
+        "suffix": ".pdf"
+      }
+    ]
   },
   {
     "semester": "大二上",
     "course": "材料学实验1",
-    "files": []
+    "files": [
+      {
+        "path": "大二上/材料学实验1/ QXU4007 EXP1-2 Report M9.docx",
+        "size": 312323,
+        "suffix": ".docx"
+      },
+      {
+        "path": "大二上/材料学实验1/Coursework Marking sheet M9.docx",
+        "size": 22270,
+        "suffix": ".docx"
+      },
+      {
+        "path": "大二上/材料学实验1/M4 EXP1-4 Presentation.pptx",
+        "size": 36204792,
+        "suffix": ".pptx"
+      },
+      {
+        "path": "大二上/材料学实验1/QXU4007 EXP1-4 Report M4.docx",
+        "size": 899190,
+        "suffix": ".docx"
+      },
+      {
+        "path": "大二上/材料学实验1/crk/EXP1-4 Self-powered vehicle Report P14.pdf",
+        "size": 366809,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大二上/材料学实验1/crk/EXP1-5 Poster P17.pptx",
+        "size": 1820540,
+        "suffix": ".pptx"
+      },
+      {
+        "path": "大二上/材料学实验1/crk/QXU4007 EXP1-1 Part 1 Report P16.docx",
+        "size": 36857,
+        "suffix": ".docx"
+      },
+      {
+        "path": "大二上/材料学实验1/crk/QXU4007 EXP1-1 Part 1 Report P16.pdf",
+        "size": 202767,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大二上/材料学实验1/crk/QXU4007 EXP1-2 Report P12.docx",
+        "size": 16921,
+        "suffix": ".docx"
+      },
+      {
+        "path": "大二上/材料学实验1/crk/QXU4007 EXP1-2 Report2 P12.pdf",
+        "size": 192036,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大二上/材料学实验1/crk/QXU4007 EXP1-3 Bridge Report P13.pdf",
+        "size": 354349,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大二上/材料学实验1/report 1.docx",
+        "size": 173063,
+        "suffix": ".docx"
+      },
+      {
+        "path": "大二上/材料学实验1/实验4/EXP1-4 Poster 1.1.pptx",
+        "size": 1016310,
+        "suffix": ".pptx"
+      },
+      {
+        "path": "大二上/材料学实验1/实验4/EXP1-4 Poster 4.0.pptx",
+        "size": 1025144,
+        "suffix": ".pptx"
+      },
+      {
+        "path": "大二上/材料学实验1/实验4/EXP1-5 Poster P17.pptx",
+        "size": 1820540,
+        "suffix": ".pptx"
+      },
+      {
+        "path": "大二上/材料学实验1/实验4/QXU4016_M11_Poster.pdf",
+        "size": 1352712,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大二上/材料学实验1/实验4/QXU4016_M11_Poster.pptx",
+        "size": 740548,
+        "suffix": ".pptx"
+      },
+      {
+        "path": "大二上/材料学实验1/材料学实验1/EXP1-1 Report Marksheet M9.xlsx",
+        "size": 56908,
+        "suffix": ".xlsx"
+      },
+      {
+        "path": "大二上/材料学实验1/材料学实验1/QXU4007 EXP1-1 Report(2).pdf",
+        "size": 983588,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大二上/材料学实验1/材料学实验1/工材实验一/EXP1-1 Round peg in a square hole report(1).docx",
+        "size": 394663,
+        "suffix": ".docx"
+      },
+      {
+        "path": "大二上/材料学实验1/材料学实验1/工材实验一/MS1 Poster and reflection P23.pdf",
+        "size": 586153,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大二上/材料学实验1/材料学实验1/工材实验一/QXU4000 Individual coursework  2021304212.docx",
+        "size": 1006260,
+        "suffix": ".docx"
+      },
+      {
+        "path": "大二上/材料学实验1/材料学实验1/工材实验一/QXU4011 Experiment 2  writing your report v6(1).pptx",
+        "size": 5645864,
+        "suffix": ".pptx"
+      },
+      {
+        "path": "大二上/材料学实验1/材料学实验3--小车/EXP1-3 Presentation Instruction.pdf",
+        "size": 169760,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大二上/材料学实验1/材料学实验3--小车/M18 EXP1-3 Presentation.pptx",
+        "size": 8272203,
+        "suffix": ".pptx"
+      },
+      {
+        "path": "大二上/材料学实验1/材料学实验3--小车/M18 EXP1-3 Presentation_20231121191556.pdf",
+        "size": 1928260,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大二上/材料学实验1/材料学实验3--小车/QXU4007 EXP1-3 Report_M18.docx",
+        "size": 4870715,
+        "suffix": ".docx"
+      },
+      {
+        "path": "大二上/材料学实验1/材料学实验3--小车/QXU4007 EXP1-3 Report_M18.pdf",
+        "size": 1328416,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大二上/材料学实验1/材料学实验3--小车/小车报告.docx",
+        "size": 4384746,
+        "suffix": ".docx"
+      },
+      {
+        "path": "大二上/材料学实验1/材料学实验3--小车/小车报告eng(1).docx",
+        "size": 4383370,
+        "suffix": ".docx"
+      }
+    ]
   },
   {
     "semester": "大二上",
@@ -1336,7 +1840,33 @@
   {
     "semester": "大二下",
     "course": "MS2",
-    "files": []
+    "files": [
+      {
+        "path": "大二下/MS2/Further Guidelines on  Coursework Requirements zh.pdf",
+        "size": 472376,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大二下/MS2/Further Guidelines on  Coursework Requirements.pdf",
+        "size": 61258,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大二下/MS2/MS2/22 - Practice Questions with Solution.pdf",
+        "size": 442400,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大二下/MS2/QXU4006 Updated Coursework Guideline zh.pdf",
+        "size": 554432,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大二下/MS2/QXU4006 Updated Coursework Guideline.pdf",
+        "size": 139681,
+        "suffix": ".pdf"
+      }
+    ]
   },
   {
     "semester": "大二下",
@@ -1384,6 +1914,11 @@
         "suffix": ".doc"
       },
       {
+        "path": "大二下/毛概/毛概期末复习(1).pdf",
+        "size": 89051592,
+        "suffix": ".pdf"
+      },
+      {
         "path": "大二下/毛概/毛泽东思想概论报告_第十组.docx",
         "size": 706964,
         "suffix": ".docx"
@@ -1408,22 +1943,161 @@
   {
     "semester": "大二下",
     "course": "faith",
-    "files": []
+    "files": [
+      {
+        "path": "大二下/faith/PES2 poster M30.pptx",
+        "size": 65485523,
+        "suffix": ".pptx"
+      },
+      {
+        "path": "大二下/faith/PES2_Marking Criteria_ Materials Library_Poster 2025.docx",
+        "size": 38422,
+        "suffix": ".docx"
+      },
+      {
+        "path": "大二下/faith/Poster M50.pptx",
+        "size": 18450464,
+        "suffix": ".pptx"
+      },
+      {
+        "path": "大二下/faith/QXU4112_Poster M50.pdf",
+        "size": 805143,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大二下/faith/QXU4112_Poster M50.pptx",
+        "size": 12938353,
+        "suffix": ".pptx"
+      }
+    ]
   },
   {
     "semester": "大三上",
     "course": "马原",
-    "files": []
+    "files": [
+      {
+        "path": "大三上/马原/马原简答论述复习资料.docx",
+        "size": 9169161,
+        "suffix": ".docx"
+      }
+    ]
   },
   {
     "semester": "大三上",
     "course": "表面与界面",
-    "files": []
+    "files": [
+      {
+        "path": "大三上/表面与界面/表界面复习题/QXU5010 - ICT4 - Question Booklet - Answers.pdf",
+        "size": 268702,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大三上/表面与界面/表界面复习题/QXU5010 2024 Exam Paper - Question Booklet.pdf",
+        "size": 348890,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大三上/表面与界面/表界面报告/QXU5010 Coursework Instructions zh-Hans.pdf",
+        "size": 615327,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大三上/表面与界面/表界面报告/QXU5010 Coursework Instructions.pdf",
+        "size": 227944,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大三上/表面与界面/题/QXU5010 - ICT2 - MCQ Answers.pdf",
+        "size": 45268,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大三上/表面与界面/题/QXU5010 - ICT3 - MCQ Answers.pdf",
+        "size": 44611,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大三上/表面与界面/题/QXU5010 Final Exam Paper - Question Booklet.pdf",
+        "size": 348890,
+        "suffix": ".pdf"
+      }
+    ]
   },
   {
     "semester": "大三上",
     "course": "结构表征",
-    "files": []
+    "files": [
+      {
+        "path": "大三上/结构表征/Answer- Scattering & Diffraction.docx",
+        "size": 561463,
+        "suffix": ".docx"
+      },
+      {
+        "path": "大三上/结构表征/Answer- TEM & SEM contrast.docx",
+        "size": 859472,
+        "suffix": ".docx"
+      },
+      {
+        "path": "大三上/结构表征/Answer- Thinking in reciprocal lattice.docx",
+        "size": 236273,
+        "suffix": ".docx"
+      },
+      {
+        "path": "大三上/结构表征/Homework- Physics of X-ray(1).docx",
+        "size": 1675618,
+        "suffix": ".docx"
+      },
+      {
+        "path": "大三上/结构表征/严启龙报告/5-张雨琛组-结构表征实验报告.docx",
+        "size": 6600104,
+        "suffix": ".docx"
+      },
+      {
+        "path": "大三上/结构表征/严启龙报告/5-张雨琛组-结构表征实验报告.pdf",
+        "size": 6954357,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大三上/结构表征/严启龙报告/95-100-刘雨昕_模范实验报告.pdf",
+        "size": 4859252,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大三上/结构表征/严启龙报告/95-98-胡钦源组_模范实验报告.pdf",
+        "size": 1984805,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大三上/结构表征/结构表征实验报告/结构表征实验报告模版-SEM.docx",
+        "size": 1859844,
+        "suffix": ".docx"
+      },
+      {
+        "path": "大三上/结构表征/结构表征实验报告/结构表征实验报告模版-SEM.pdf",
+        "size": 1809061,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大三上/结构表征/结构表征实验报告/结构表征实验报告模版-TEM.docx",
+        "size": 520702,
+        "suffix": ".docx"
+      },
+      {
+        "path": "大三上/结构表征/结构表征实验报告/结构表征实验报告模版-TEM.pdf",
+        "size": 768416,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大三上/结构表征/结构表征实验报告/结构表征实验报告模版-XRD.docx",
+        "size": 913541,
+        "suffix": ".docx"
+      },
+      {
+        "path": "大三上/结构表征/结构表征实验报告/结构表征实验报告模版-XRD.pdf",
+        "size": 1067890,
+        "suffix": ".pdf"
+      }
+    ]
   },
   {
     "semester": "大三上",
@@ -1433,12 +2107,94 @@
   {
     "semester": "大三上",
     "course": "金属",
-    "files": []
+    "files": [
+      {
+        "path": "大三上/金属/Metal report/LAB 1 - Lab report tamplate.docx",
+        "size": 2873125,
+        "suffix": ".docx"
+      },
+      {
+        "path": "大三上/金属/Metal report/LAB 1 - Lab report tamplate.pdf",
+        "size": 3215830,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大三上/金属/Metal report/LAB 2&3 - Lab report tamplate.docx",
+        "size": 13581658,
+        "suffix": ".docx"
+      },
+      {
+        "path": "大三上/金属/Metal report/LAB 2&3 - Lab report tamplate.pdf",
+        "size": 13172526,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大三上/金属/Tutorial solutions (1).pdf",
+        "size": 6237834,
+        "suffix": ".pdf"
+      }
+    ]
   },
   {
     "semester": "大三上",
     "course": "高分子物理",
-    "files": []
+    "files": [
+      {
+        "path": "大三上/高分子物理/PPP Presentation/COURSEWORK PPP zh-Hans.docx",
+        "size": 35053,
+        "suffix": ".docx"
+      },
+      {
+        "path": "大三上/高分子物理/PPP Presentation/COURSEWORK PPP.docx",
+        "size": 35896,
+        "suffix": ".docx"
+      },
+      {
+        "path": "大三上/高分子物理/PPP Presentation/GROUP Presentation Assessment(2) zh-Hans.pdf",
+        "size": 515935,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大三上/高分子物理/PPP Presentation/GROUP Presentation Assessment(2).pdf",
+        "size": 96914,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大三上/高分子物理/PPP Presentation/M3_QXU5032_Polymer Physics Presentation Assessment(1) zh-Hans.pdf",
+        "size": 9237325,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大三上/高分子物理/PPP Presentation/M3_QXU5032_Polymer Physics Presentation Assessment(1).pdf",
+        "size": 4595888,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大三上/高分子物理/PPP Presentation/Polymer Physics Presentation Assessment.pdf",
+        "size": 81941,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大三上/高分子物理/PPP Report/终report(1).docx",
+        "size": 3018826,
+        "suffix": ".docx"
+      },
+      {
+        "path": "大三上/高分子物理/QXU5032_Revision Questions for All topics_Dec2024_LW_with some answers.docx",
+        "size": 30459,
+        "suffix": ".docx"
+      },
+      {
+        "path": "大三上/高分子物理/复习 总.pdf",
+        "size": 33395447,
+        "suffix": ".pdf"
+      },
+      {
+        "path": "大三上/高分子物理/高物复习题/MOCK ANSWERS.docx",
+        "size": 249378,
+        "suffix": ".docx"
+      }
+    ]
   },
   {
     "semester": "大三上",

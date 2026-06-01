@@ -3,6 +3,7 @@ from __future__ import annotations
 import fnmatch
 import json
 import os
+import re
 from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Iterable
@@ -19,9 +20,15 @@ PRIVATE_KEYWORDS = ["个人", "学生会", "名单", "报名表", "简历", "入
 SENIOR_OR_OLD_KEYWORDS = ["学姐", "学长", "往年", "历年", "2022级之前", "资料出售", "出售"]
 COURSEWARE_KEYWORDS = ["lecture", "课件", "slides", "chapter", "week", "module guide", "module_guide", "教学"]
 INCLUDE_KEYWORDS = ["report", "报告", "作业", "homework", "coursework", "data", "原始数据", "raw data", "poster", "presentation", "答辩", "logbook", "worksheet", "工作簿", "代码", "复习", "总结", "笔记"]
-TEXTBOOK_OR_ANSWER_KEYWORDS = ["教材", "课本", "ebook", "e-book", "textbook", "book", "答案", "answer", "answers", "solution", "solutions", "习题答案"]
+TEXTBOOK_KEYWORDS = ["教材", "课本", "ebook", "e-book", "textbook", "book"]
+ANSWER_KEYWORDS = ["答案", "answer", "answers", "习题答案"]
+ANSWER_SOLUTION_RE = re.compile(
+    r"\b(examples?|questions?|practice|tutorial|mock|with)\b.*\bsolutions?\b"
+    r"|\bsolutions?\b.*\b(examples?|questions?|answers?|manual)\b",
+    re.IGNORECASE,
+)
 AMBIGUOUS_KEYWORDS = ["chapter", "week", "module guide", "module_guide", "revision", "review", "zh-hans", "翻译"]
-EXPLICIT_COURSEWARE_KEYWORDS = ["lecture", "课件", "slides"]
+EXPLICIT_COURSEWARE_KEYWORDS = ["lecture", "课件", "slides", "学时"]
 
 
 @dataclass(frozen=True)
@@ -125,7 +132,7 @@ def classify_path(path: Path, include: Iterable[str] = (), exclude: Iterable[str
     if matched is not None:
         return Classification(CATEGORY_INCLUDE, f"命中课程收录规则：{matched}")
 
-    matched = _first_keyword(name_lower, TEXTBOOK_OR_ANSWER_KEYWORDS)
+    matched = _first_textbook_or_answer_keyword(name_lower)
     if matched is not None:
         return Classification(CATEGORY_INCLUDE, f"命中教材或答案关键词：{matched}")
 
@@ -260,6 +267,21 @@ def _first_keyword(text: str, keywords: list[str]) -> str | None:
     for keyword in keywords:
         if keyword.lower() in text:
             return keyword
+    return None
+
+
+def _first_textbook_or_answer_keyword(text: str) -> str | None:
+    matched = _first_keyword(text, TEXTBOOK_KEYWORDS)
+    if matched is not None:
+        return matched
+
+    matched = _first_keyword(text, ANSWER_KEYWORDS)
+    if matched is not None:
+        return matched
+
+    if ANSWER_SOLUTION_RE.search(text):
+        return "solution"
+
     return None
 
 
