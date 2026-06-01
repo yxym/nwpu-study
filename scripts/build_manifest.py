@@ -6,7 +6,7 @@ import sys
 from collections import defaultdict
 from pathlib import Path
 
-from scripts.archive_policy import CATEGORY_EXCLUDE, classify_path, load_whitelist
+from scripts.archive_policy import CATEGORY_EXCLUDE, CourseEntry, WhitelistConfig, classify_path, load_whitelist
 
 MANIFEST_REL = Path("docs/review/repo-manifest.json")
 INDEX_REL = Path("收录内容.md")
@@ -32,7 +32,10 @@ def build_manifest(repo_root: Path, whitelist_path: Path) -> list[dict[str, obje
     root = repo_root.resolve()
     whitelist = _resolve_whitelist(root, whitelist_path)
     config = load_whitelist(whitelist)
+    return _build_manifest_from_config(root, config)
 
+
+def _build_manifest_from_config(repo_root: Path, config: WhitelistConfig) -> list[dict[str, object]]:
     manifest: list[dict[str, object]] = []
     seen: set[tuple[str, str]] = set()
     for course in config.courses:
@@ -44,7 +47,7 @@ def build_manifest(repo_root: Path, whitelist_path: Path) -> list[dict[str, obje
             {
                 "semester": course.semester,
                 "course": course.target,
-                "files": relative_file_entries(root, course.semester, course.target),
+                "files": relative_file_entries(repo_root, course.semester, course.target),
             }
         )
     return manifest
@@ -92,12 +95,17 @@ def write_index(repo_root: Path, manifest: list[dict[str, object]]) -> None:
     path.write_text("\n".join(lines), encoding="utf-8")
 
 
-def run_checks(manifest: list[dict[str, object]]) -> list[str]:
+def run_checks(manifest: list[dict[str, object]], config: WhitelistConfig | None = None) -> list[str]:
     errors: list[str] = []
+    courses = _course_lookup(config) if config is not None else {}
     for course in manifest:
+        course_key = (str(course["semester"]), str(course["course"]))
+        course_rules = courses.get(course_key)
+        include = course_rules.include if course_rules is not None else []
+        exclude = course_rules.exclude if course_rules is not None else []
         for file_entry in course["files"]:
             rel_path = Path(str(file_entry["path"]))
-            classification = classify_path(rel_path)
+            classification = classify_path(rel_path, include=include, exclude=exclude)
             if classification.category == CATEGORY_EXCLUDE:
                 errors.append(f"{rel_path.as_posix()}: {classification.reason}")
     return errors
@@ -117,9 +125,8 @@ def main(argv: list[str] | None = None) -> int:
         return 2
 
     try:
-        manifest = build_manifest(repo_root, whitelist_path)
-        write_manifest(repo_root, manifest)
-        write_index(repo_root, manifest)
+        config = load_whitelist(whitelist_path)
+        manifest = _build_manifest_from_config(repo_root, config)
     except (OSError, ValueError, KeyError, TypeError, json.JSONDecodeError) as exc:
         print(exc, file=sys.stderr)
         return 2
@@ -127,11 +134,18 @@ def main(argv: list[str] | None = None) -> int:
     print(f"课程数：{len(manifest)}")
 
     if args.check:
-        errors = run_checks(manifest)
+        errors = run_checks(manifest, config)
         for error in errors:
             print(f"ERROR: {error}", file=sys.stderr)
         if errors:
             return 2
+
+    try:
+        write_manifest(repo_root, manifest)
+        write_index(repo_root, manifest)
+    except (OSError, ValueError) as exc:
+        print(exc, file=sys.stderr)
+        return 2
 
     return 0
 
@@ -149,6 +163,13 @@ def _resolve_under_repo(repo_root: Path, rel_path: Path) -> Path:
     except ValueError as exc:
         raise ValueError(f"path escapes repo root: {rel_path.as_posix()}") from exc
     return target
+
+
+def _course_lookup(config: WhitelistConfig) -> dict[tuple[str, str], CourseEntry]:
+    courses: dict[tuple[str, str], CourseEntry] = {}
+    for course in config.courses:
+        courses.setdefault((course.semester, course.target), course)
+    return courses
 
 
 def _escape_markdown_cell(text: str) -> str:

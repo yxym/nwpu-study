@@ -44,6 +44,44 @@ class BuildManifestTest(unittest.TestCase):
             self.assertEqual(code, 2)
             self.assertIn("课程数：1", stdout.getvalue())
             self.assertIn("学姐资料/old.docx", stderr.getvalue())
+            self.assertFalse((repo / "收录内容.md").exists())
+            self.assertFalse((repo / "docs" / "review" / "repo-manifest.json").exists())
+
+    def test_check_uses_course_exclude_patterns(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            repo = Path(tmp)
+            (repo / "大二上" / "材料化学").mkdir(parents=True)
+            (repo / "大二上" / "材料化学" / "foo.pptx").write_text("x", encoding="utf-8")
+            whitelist = repo / "public-whitelist.yml"
+            self._write_whitelist(whitelist, exclude=["*.pptx"])
+
+            stdout = io.StringIO()
+            stderr = io.StringIO()
+            with redirect_stdout(stdout), redirect_stderr(stderr):
+                code = main(["--repo-root", str(repo), "--whitelist", str(whitelist), "--check"])
+
+            self.assertEqual(code, 2)
+            self.assertIn("课程数：1", stdout.getvalue())
+            self.assertIn("foo.pptx", stderr.getvalue())
+            self.assertFalse((repo / "收录内容.md").exists())
+            self.assertFalse((repo / "docs" / "review" / "repo-manifest.json").exists())
+
+    def test_check_pass_writes_outputs(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            repo = Path(tmp)
+            (repo / "大二上" / "材料化学").mkdir(parents=True)
+            (repo / "大二上" / "材料化学" / "report.docx").write_text("x", encoding="utf-8")
+            whitelist = repo / "public-whitelist.yml"
+            self._write_whitelist(whitelist)
+
+            stdout = io.StringIO()
+            with redirect_stdout(stdout):
+                code = main(["--repo-root", str(repo), "--whitelist", str(whitelist), "--check"])
+
+            self.assertEqual(code, 0)
+            self.assertIn("课程数：1", stdout.getvalue())
+            self.assertTrue((repo / "收录内容.md").exists())
+            self.assertTrue((repo / "docs" / "review" / "repo-manifest.json").exists())
 
     def test_missing_whitelist_returns_error_without_traceback(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -84,7 +122,7 @@ class BuildManifestTest(unittest.TestCase):
                 ["大二上/材料化学/report.docx"],
             )
 
-    def _write_whitelist(self, path: Path) -> None:
+    def _write_whitelist(self, path: Path, exclude: list[str] | None = None) -> None:
         path.write_text(
             json.dumps(
                 {
@@ -95,7 +133,7 @@ class BuildManifestTest(unittest.TestCase):
                             "target": "材料化学",
                             "sources": ["02大二/大二上/材料化学"],
                             "include": [],
-                            "exclude": [],
+                            "exclude": exclude or [],
                         }
                     ],
                 },
