@@ -28,6 +28,30 @@ class BuildManifestTest(unittest.TestCase):
             self.assertIn("材料化学", index)
             self.assertEqual(manifest[0]["files"][0]["path"], "大二上/材料化学/report.docx")
 
+    def test_index_lists_course_file_details(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            repo = Path(tmp)
+            course_dir = repo / "大二上" / "材料化学"
+            (course_dir / "实验").mkdir(parents=True)
+            (course_dir / "report.docx").write_text("x" * 1536, encoding="utf-8")
+            (course_dir / "实验" / "data|raw.csv").write_text("abc", encoding="utf-8")
+            whitelist = repo / "public-whitelist.yml"
+            self._write_whitelist(whitelist)
+
+            stdout = io.StringIO()
+            with redirect_stdout(stdout):
+                code = main(["--repo-root", str(repo), "--whitelist", str(whitelist)])
+
+            self.assertEqual(code, 0)
+            index = (repo / "收录内容.md").read_text(encoding="utf-8")
+            self.assertIn("### 大二上 / 材料化学", index)
+            self.assertIn("| 文件 | 类型 | 大小 | 路径 |", index)
+            self.assertIn("| report.docx | .docx | 1.5 KB | 大二上/材料化学/report.docx |", index)
+            self.assertIn(
+                "| data\\|raw.csv | .csv | 3 B | 大二上/材料化学/实验/data\\|raw.csv |",
+                index,
+            )
+
     def test_fails_when_imported_path_contains_excluded_keyword(self):
         with tempfile.TemporaryDirectory() as tmp:
             repo = Path(tmp)

@@ -91,6 +91,35 @@ def write_index(repo_root: Path, manifest: list[dict[str, object]]) -> None:
                 f"{_escape_markdown_cell(suffix_text)} |"
             )
         lines.append("")
+        for course in sorted(grouped[semester], key=lambda item: str(item["course"])):
+            files = sorted(list(course["files"]), key=lambda item: str(item["path"]))
+            lines.extend(
+                [
+                    f"### {_escape_markdown_text(semester)} / {_escape_markdown_text(str(course['course']))}",
+                    "",
+                ]
+            )
+            if not files:
+                lines.extend(["暂无文件", ""])
+                continue
+
+            lines.extend(
+                [
+                    "| 文件 | 类型 | 大小 | 路径 |",
+                    "| --- | --- | ---: | --- |",
+                ]
+            )
+            for file_entry in files:
+                path = str(file_entry["path"])
+                suffix = str(file_entry["suffix"]) or "无扩展名"
+                lines.append(
+                    "| "
+                    f"{_escape_markdown_cell(Path(path).name)} | "
+                    f"{_escape_markdown_cell(suffix)} | "
+                    f"{_escape_markdown_cell(_format_size(int(file_entry['size'])))} | "
+                    f"{_escape_markdown_cell(path)} |"
+                )
+            lines.append("")
 
     path = _resolve_under_repo(repo_root.resolve(), INDEX_REL)
     path.write_text("\n".join(lines), encoding="utf-8")
@@ -206,6 +235,19 @@ def _escape_markdown_text(text: str) -> str:
         .replace("\r", "<br>")
         .replace("\n", "<br>")
     )
+
+
+def _format_size(size: int) -> str:
+    if size < 1024:
+        return f"{size} B"
+    value = size / 1024
+    if value < 1024:
+        return f"{value:.1f} KB"
+    value /= 1024
+    if value < 1024:
+        return f"{value:.1f} MB"
+    value /= 1024
+    return f"{value:.1f} GB"
 
 
 if __name__ == "__main__":
