@@ -39,7 +39,7 @@
 1. 根据 `public-whitelist.yml` 扫描白名单来源，生成候选清单：
 
    ```bash
-   python3 scripts/collect_candidates.py
+   python3 -m scripts.collect_candidates
    ```
 
    默认输出：
@@ -61,25 +61,25 @@
 先预览将要复制的文件：
 
 ```bash
-python3 scripts/sync_public_files.py --dry-run
+python3 -m scripts.sync_public_files --dry-run
 ```
 
 确认无误后导入已批准文件：
 
 ```bash
-python3 scripts/sync_public_files.py
+python3 -m scripts.sync_public_files
 ```
 
 导入后生成索引和仓库 manifest：
 
 ```bash
-python3 scripts/build_manifest.py
+python3 -m scripts.build_manifest
 ```
 
 提交前运行公开边界检查：
 
 ```bash
-python3 scripts/build_manifest.py --check
+python3 -m scripts.build_manifest --check
 ```
 
 如果 `--check` 报错，说明仓库当前已收录文件命中了排除规则。请按错误中的具体路径处理，不要手动绕过或隐藏错误。

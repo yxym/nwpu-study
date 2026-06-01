@@ -59,7 +59,7 @@ git lfs pull
 推荐在提交前运行：
 
 ```bash
-python3 scripts/build_manifest.py --check
+python3 -m scripts.build_manifest --check
 ```
 
 ## 许可与版权
