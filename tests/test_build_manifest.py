@@ -47,6 +47,28 @@ class BuildManifestTest(unittest.TestCase):
             self.assertFalse((repo / "收录内容.md").exists())
             self.assertFalse((repo / "docs" / "review" / "repo-manifest.json").exists())
 
+    def test_non_check_filters_excluded_keyword_paths_from_outputs(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            repo = Path(tmp)
+            (repo / "大二上" / "材料化学" / "学姐资料").mkdir(parents=True)
+            (repo / "大二上" / "材料化学" / "report.docx").write_text("x", encoding="utf-8")
+            (repo / "大二上" / "材料化学" / "学姐资料" / "old.docx").write_text("x", encoding="utf-8")
+            whitelist = repo / "public-whitelist.yml"
+            self._write_whitelist(whitelist)
+
+            stdout = io.StringIO()
+            with redirect_stdout(stdout):
+                code = main(["--repo-root", str(repo), "--whitelist", str(whitelist)])
+
+            self.assertEqual(code, 0)
+            self.assertIn("课程数：1", stdout.getvalue())
+            index = (repo / "收录内容.md").read_text(encoding="utf-8")
+            manifest = json.loads((repo / "docs" / "review" / "repo-manifest.json").read_text(encoding="utf-8"))
+            paths = [file["path"] for course in manifest for file in course["files"]]
+            self.assertEqual(paths, ["大二上/材料化学/report.docx"])
+            self.assertNotIn("学姐资料", index)
+            self.assertNotIn("学姐资料", json.dumps(manifest, ensure_ascii=False))
+
     def test_check_uses_course_exclude_patterns(self):
         with tempfile.TemporaryDirectory() as tmp:
             repo = Path(tmp)
@@ -65,6 +87,28 @@ class BuildManifestTest(unittest.TestCase):
             self.assertIn("foo.pptx", stderr.getvalue())
             self.assertFalse((repo / "收录内容.md").exists())
             self.assertFalse((repo / "docs" / "review" / "repo-manifest.json").exists())
+
+    def test_non_check_filters_course_exclude_patterns_from_outputs(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            repo = Path(tmp)
+            (repo / "大二上" / "材料化学").mkdir(parents=True)
+            (repo / "大二上" / "材料化学" / "foo.pptx").write_text("x", encoding="utf-8")
+            (repo / "大二上" / "材料化学" / "report.docx").write_text("x", encoding="utf-8")
+            whitelist = repo / "public-whitelist.yml"
+            self._write_whitelist(whitelist, exclude=["*.pptx"])
+
+            stdout = io.StringIO()
+            with redirect_stdout(stdout):
+                code = main(["--repo-root", str(repo), "--whitelist", str(whitelist)])
+
+            self.assertEqual(code, 0)
+            self.assertIn("课程数：1", stdout.getvalue())
+            index = (repo / "收录内容.md").read_text(encoding="utf-8")
+            manifest = json.loads((repo / "docs" / "review" / "repo-manifest.json").read_text(encoding="utf-8"))
+            paths = [file["path"] for course in manifest for file in course["files"]]
+            self.assertEqual(paths, ["大二上/材料化学/report.docx"])
+            self.assertNotIn("foo.pptx", index)
+            self.assertNotIn("foo.pptx", json.dumps(manifest, ensure_ascii=False))
 
     def test_check_pass_writes_outputs(self):
         with tempfile.TemporaryDirectory() as tmp:

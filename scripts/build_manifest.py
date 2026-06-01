@@ -32,7 +32,8 @@ def build_manifest(repo_root: Path, whitelist_path: Path) -> list[dict[str, obje
     root = repo_root.resolve()
     whitelist = _resolve_whitelist(root, whitelist_path)
     config = load_whitelist(whitelist)
-    return _build_manifest_from_config(root, config)
+    manifest = _build_manifest_from_config(root, config)
+    return filter_excluded_files(manifest, config)
 
 
 def _build_manifest_from_config(repo_root: Path, config: WhitelistConfig) -> list[dict[str, object]]:
@@ -111,6 +112,26 @@ def run_checks(manifest: list[dict[str, object]], config: WhitelistConfig | None
     return errors
 
 
+def filter_excluded_files(
+    manifest: list[dict[str, object]], config: WhitelistConfig | None = None
+) -> list[dict[str, object]]:
+    courses = _course_lookup(config) if config is not None else {}
+    filtered: list[dict[str, object]] = []
+    for course in manifest:
+        course_key = (str(course["semester"]), str(course["course"]))
+        course_rules = courses.get(course_key)
+        include = course_rules.include if course_rules is not None else []
+        exclude = course_rules.exclude if course_rules is not None else []
+        files = []
+        for file_entry in course["files"]:
+            rel_path = Path(str(file_entry["path"]))
+            classification = classify_path(rel_path, include=include, exclude=exclude)
+            if classification.category != CATEGORY_EXCLUDE:
+                files.append(file_entry)
+        filtered.append({**course, "files": files})
+    return filtered
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="生成课程资料索引并检查公开边界。")
     parser.add_argument("--repo-root", default=".")
@@ -141,8 +162,9 @@ def main(argv: list[str] | None = None) -> int:
             return 2
 
     try:
-        write_manifest(repo_root, manifest)
-        write_index(repo_root, manifest)
+        filtered_manifest = filter_excluded_files(manifest, config)
+        write_manifest(repo_root, filtered_manifest)
+        write_index(repo_root, filtered_manifest)
     except (OSError, ValueError) as exc:
         print(exc, file=sys.stderr)
         return 2
