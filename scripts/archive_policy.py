@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import fnmatch
 import json
+import os
 from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Iterable
@@ -30,6 +31,7 @@ class CourseEntry:
     sources: list[str]
     include: list[str]
     exclude: list[str]
+    prune: list[str]
 
 
 @dataclass(frozen=True)
@@ -89,6 +91,7 @@ def load_whitelist(path: Path) -> WhitelistConfig:
             sources=[str(source) for source in course.get("sources", [])],
             include=[str(pattern) for pattern in course.get("include", [])],
             exclude=[str(pattern) for pattern in course.get("exclude", [])],
+            prune=[str(pattern) for pattern in course.get("prune", [])],
         )
         for course in data.get("courses", [])
     ]
@@ -174,12 +177,26 @@ def unique_target_rel(target_rel: Path, used: set[str]) -> str:
         index += 1
 
 
-def iter_source_files(root: Path) -> Iterable[Path]:
+def iter_source_files(root: Path, prune: Iterable[str] = ()) -> Iterable[Path]:
+    prune_patterns = tuple(prune)
     if root.is_file():
-        yield root
+        if not _matches_prune_path(Path(root.name), prune_patterns):
+            yield root
         return
     if root.is_dir():
-        yield from sorted((path for path in root.rglob("*") if path.is_file()), key=lambda item: item.as_posix())
+        for current, dirnames, filenames in os.walk(root):
+            current_path = Path(current)
+            dirnames.sort()
+            filenames.sort()
+            dirnames[:] = [
+                dirname
+                for dirname in dirnames
+                if not _matches_prune_path((current_path / dirname).relative_to(root), prune_patterns)
+            ]
+            for filename in filenames:
+                path = current_path / filename
+                if not _matches_prune_path(path.relative_to(root), prune_patterns):
+                    yield path
 
 
 def _first_keyword(text: str, keywords: list[str]) -> str | None:
@@ -197,3 +214,16 @@ def _first_pattern(path: Path, patterns: Iterable[str]) -> str | None:
         if fnmatch.fnmatch(path_text, pattern_text) or fnmatch.fnmatch(name, pattern_text):
             return pattern
     return None
+
+
+def _matches_prune_path(path: Path, patterns: Iterable[str]) -> bool:
+    path_text = path.as_posix().lower()
+    for pattern in patterns:
+        pattern_text = pattern.lower()
+        if fnmatch.fnmatch(path_text, pattern_text):
+            return True
+        if pattern_text.endswith("/**"):
+            subtree = pattern_text[:-3]
+            if path_text == subtree or path_text.startswith(f"{subtree}/"):
+                return True
+    return False

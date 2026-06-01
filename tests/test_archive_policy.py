@@ -31,6 +31,14 @@ class ArchivePolicyTest(unittest.TestCase):
                                 "sources": ["02大二/大二上/材料化学"],
                                 "include": ["*report*"],
                                 "exclude": ["*Lecture*"],
+                                "prune": ["private/**"],
+                            },
+                            {
+                                "semester": "大二上",
+                                "target": "工程设计方法",
+                                "sources": ["02大二/大二上/工程设计方法"],
+                                "include": [],
+                                "exclude": [],
                             }
                         ],
                     },
@@ -46,6 +54,8 @@ class ArchivePolicyTest(unittest.TestCase):
             self.assertEqual(config.courses[0].semester, "大二上")
             self.assertEqual(config.courses[0].target, "材料化学")
             self.assertEqual(config.courses[0].sources, ["02大二/大二上/材料化学"])
+            self.assertEqual(config.courses[0].prune, ["private/**"])
+            self.assertEqual(config.courses[1].prune, [])
 
     def test_classification_rules(self):
         self.assertEqual(classify_path(Path(".DS_Store")).category, CATEGORY_EXCLUDE)
@@ -86,6 +96,18 @@ class ArchivePolicyTest(unittest.TestCase):
             files = list(iter_source_files(root))
 
             self.assertEqual(files, [root / "a.txt", nested / "2.txt"])
+
+    def test_iter_source_files_prunes_matching_subtrees(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            private = root / "case study个人"
+            private.mkdir()
+            (private / "hidden.txt").write_text("hidden", encoding="utf-8")
+            (root / "visible.txt").write_text("visible", encoding="utf-8")
+
+            files = list(iter_source_files(root, prune=["case study个人/**"]))
+
+            self.assertEqual(files, [root / "visible.txt"])
 
     def test_safe_target_path_rejects_traversal(self):
         repo_root = Path("/tmp/repo")
@@ -146,6 +168,36 @@ class ArchivePolicyTest(unittest.TestCase):
         self.assertEqual(semesters, {"大一上", "大一下", "大二上", "大二下", "大三上"})
         self.assertTrue(all(course.sources for course in config.courses))
         self.assertTrue(all(not source.startswith("../") for course in config.courses for source in course.sources))
+
+    def test_project_whitelist_does_not_publish_private_paths(self):
+        config = load_whitelist(Path("public-whitelist.yml"))
+        dangerous_keywords = [
+            "个人",
+            "学生会",
+            "班级",
+            "名单",
+            "报名表",
+            "简历",
+            "入党",
+            "出国",
+            "学姐",
+            "学长",
+            "往年",
+            "资料出售",
+        ]
+
+        for course in config.courses:
+            self.assertFalse(Path(course.target).is_absolute(), course.target)
+            self.assertNotIn("..", Path(course.target).parts, course.target)
+            self.assertFalse(any(keyword in course.target for keyword in dangerous_keywords), course.target)
+
+            for source in course.sources:
+                self.assertFalse(Path(source).is_absolute(), source)
+                self.assertNotIn("..", Path(source).parts, source)
+                self.assertFalse(any(keyword in source for keyword in dangerous_keywords), source)
+
+        keying = next(course for course in config.courses if course.semester == "大一下" and course.target == "科英")
+        self.assertIn("case study个人/**", keying.prune)
 
 
 if __name__ == "__main__":

@@ -4,7 +4,7 @@
     {"semester": "大一上", "target": "英语课", "sources": ["01大一/大一上/09英语课"], "include": [], "exclude": ["*Lecture*", "*lecture*", "*课件*"]},
     {"semester": "大一上", "target": "faith", "sources": ["01大一/大一上/05faith课"], "include": [], "exclude": ["*Lecture*", "*lecture*", "*课件*"]},
     {"semester": "大一上", "target": "公共教材与答案", "sources": ["01大一/大一上/11课本"], "include": ["*教材*", "*课本*", "*答案*", "*Calculus*", "*Physics*", "*线性代数*"], "exclude": []},
-    {"semester": "大一下", "target": "科英", "sources": ["01大一/大一下/科英"], "include": [], "exclude": ["*Lecture*", "*lecture*", "*课件*"]},
+    {"semester": "大一下", "target": "科英", "sources": ["01大一/大一下/科英"], "include": [], "exclude": ["*Lecture*", "*lecture*", "*课件*"], "prune": ["case study个人/**"]},
     {"semester": "大一下", "target": "高等数学", "sources": ["01大一/大一下/高等数学"], "include": [], "exclude": ["*Lecture*", "*lecture*", "*课件*"]},
     {"semester": "大一下", "target": "工程材料", "sources": ["01大一/大一下/工程材料"], "include": [], "exclude": ["*Lecture*", "*lecture*", "*课件*"]},
     {"semester": "大一下", "target": "工程化学", "sources": ["01大一/大一下/工程化学"], "include": [], "exclude": ["*Lecture*", "*lecture*", "*课件*", "*.pptx"]},
