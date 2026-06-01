@@ -1,10 +1,10 @@
-# NWPU QM Course Archive Design
+# 西工大 QM 课程资料归档设计
 
-## Purpose
+## 目标
 
-Build this repository into a public course-material archive for NWPU Queen Mary Engineering School, inspired by `PKUanonym/REKCARC-TSC-UHT`, while avoiding accidental publication of private or unrelated files from the local `大学` folder.
+把本仓库整理成一个面向公开分享的西北工业大学伦敦玛丽女王大学工程学院课程资料归档仓库，风格参考 `PKUanonym/REKCARC-TSC-UHT`，但核心前提是避免把本地 `大学` 文件夹里的隐私文件、学生工作文件或无关资料误公开。
 
-The archive should cover these semesters:
+第一版归档覆盖以下学期：
 
 - `大一上`
 - `大一下`
@@ -12,55 +12,55 @@ The archive should cover these semesters:
 - `大二下`
 - `大三上`
 
-The guiding rule is whitelist-first publication: only explicitly approved semester/course folders are candidates for import. Everything else is private or out of scope by default.
+总原则是白名单优先：只有明确列入白名单的“学期 / 课程”目录才会进入候选范围，其它目录默认都视为隐私或不在本次范围内。
 
-## Source And Target
+## 来源与目标仓库
 
-Source root:
+来源根目录：
 
 ```text
 /Users/chexuanming/Desktop/大学
 ```
 
-Target repository:
+目标仓库：
 
 ```text
 /Users/chexuanming/Desktop/nwpu-study
 ```
 
-The target repository already contains some course folders under `大一下` and `大二下`. The redesign should preserve useful existing material, add missing public semesters/courses, and improve documentation and review workflow.
+目标仓库现在已经有部分 `大一下` 和 `大二下` 课程目录。后续改造应保留已有有用资料，补齐缺失的公开学期和课程，并补上更清楚的文档、白名单和候选文件复核流程。
 
-## Public File Policy
+## 公开文件规则
 
-### Include
+### 可以收录
 
-The user approved including:
+用户已确认可以公开：
 
-- personal coursework
-- lab reports
-- raw data
-- files containing the user's name, student ID, or group information
-- textbooks and ebooks
-- teacher-provided answers
-- the user's notes, summaries, review material, code, posters, presentations, and course outputs
+- 个人课程作业
+- 实验报告
+- 原始数据
+- 含本人姓名、学号或小组信息的文件
+- 教材和电子书
+- 老师发的答案
+- 自己整理的笔记、总结、复习资料、代码、poster、presentation 和课程产出
 
-### Exclude
+### 不收录
 
-The user requested excluding:
+用户已确认不公开：
 
-- courseware and lecture slides
-- senior-student materials
-- previous-year materials
+- 课件和 lecture slides
+- 学长学姐资料
+- 往年资料
 
-The workflow should also exclude or flag non-course/private material by default, including student-union work, class rosters, signup forms, resumes, party-application files, outbound-study files, competition administration, and other unrelated personal folders.
+流程还应默认排除或标红非课程 / 隐私内容，例如学生会材料、班级名单、报名表、简历、入党材料、出国文件、比赛行政材料，以及其它与课程归档无关的个人目录。
 
-### Ambiguous Items
+### 模糊项
 
-Some filenames are ambiguous, especially PDFs named like chapters, weeks, module guides, translated lecture notes, or revision sheets. The import workflow should not rely on automatic deletion for these. It should generate a review list that marks ambiguous files for human confirmation before import.
+有些文件仅凭文件名很难判断，例如以 chapter、week、module guide、翻译版讲义、revision sheet 命名的 PDF。导入流程不能直接依赖自动删除或自动保留，而应先生成候选清单，把这类文件标为“需要人工判断”，由用户确认后再导入。
 
-## Repository Structure
+## 仓库结构
 
-Use a simple semester-to-course hierarchy:
+采用简洁的“学期 -> 课程”层级：
 
 ```text
 README.md
@@ -88,94 +88,94 @@ scripts/
   课程名/
 ```
 
-Course directories should keep original filenames where possible. The workflow may remove obvious local junk such as `.DS_Store`, Office lock files, temporary files, and duplicate archive artifacts when they are not the primary source.
+课程目录尽量保留原文件名。流程可以自动跳过明显的本地垃圾文件，例如 `.DS_Store`、Office 临时锁文件、临时文件，以及不是主要来源的重复压缩包。
 
-## Whitelist Configuration
+## 白名单配置
 
-Create `public-whitelist.yml` to explicitly list approved source course folders and target course names. The first version should include the five approved semesters and course directories identified from the local folder structure, but no files should be imported until the generated candidate list is reviewed.
+创建 `public-whitelist.yml`，显式列出允许处理的来源课程目录和目标课程名称。第一版应覆盖用户确认的五个学期，以及从本地目录结构中识别出的课程目录；但在候选清单被用户复核前，不导入任何文件。
 
-The whitelist should support:
+白名单需要支持：
 
-- source path relative to `/Users/chexuanming/Desktop/大学`
-- target semester
-- target course name
-- optional aliases for duplicate folders, such as `高物` and `2025高分子物理`
-- optional per-course include/exclude overrides
+- 相对于 `/Users/chexuanming/Desktop/大学` 的来源路径
+- 目标学期
+- 目标课程名
+- 可选别名，用于处理 `高物` 和 `2025高分子物理` 这类重复或新版目录
+- 可选的课程级 include / exclude 覆盖规则
 
-## Candidate Generation
+## 候选文件生成
 
-`scripts/collect_candidates.py` should scan only the whitelist entries and write `docs/review/candidates.md`.
+`scripts/collect_candidates.py` 只扫描 `public-whitelist.yml` 中列出的目录，并输出 `docs/review/candidates.md`。
 
-Each candidate file should be categorized as:
+每个候选文件分为三类：
 
-- `建议收录`: likely public under the approved policy
-- `建议排除`: likely courseware, senior-student material, previous-year material, private/non-course material, local junk, or generated duplicate
-- `需要人工判断`: unclear from filename alone
+- `建议收录`：根据已确认规则，较可能适合公开
+- `建议排除`：较可能是课件、学长学姐资料、往年资料、非课程隐私材料、本地垃圾文件或重复生成文件
+- `需要人工判断`：只看文件名无法可靠判断
 
-The candidate report should group files by semester and course. It should show each file's source path, target path, size, file type, and reason for the category.
+候选清单按学期和课程分组。每个文件应展示来源路径、目标路径、文件大小、文件类型和分类理由。
 
-## Import Workflow
+## 导入流程
 
-`scripts/sync_public_files.py` should copy only files approved by the reviewed candidate list. It should never scan or import from folders that are not in `public-whitelist.yml`.
+`scripts/sync_public_files.py` 只复制经过候选清单确认的文件。脚本绝不能扫描或导入 `public-whitelist.yml` 之外的目录。
 
-The script should:
+脚本需要：
 
-- create missing target semester/course directories
-- preserve source filenames unless a collision requires a deterministic suffix
-- skip `.DS_Store`, temporary files, Office lock files, and other local artifacts
-- avoid copying excluded candidates
-- write a machine-readable manifest of imported files
-- support a dry-run mode before copying
+- 创建缺失的目标学期 / 课程目录
+- 尽量保留原文件名；如果发生重名冲突，使用确定性的后缀
+- 跳过 `.DS_Store`、临时文件、Office 锁文件等本地杂项
+- 不复制被排除的候选文件
+- 写出机器可读的已导入文件 manifest
+- 支持 dry-run，在实际复制前预览结果
 
-The import should happen after candidate review, not during the design/spec phase.
+实际导入应发生在用户 review 候选清单之后，而不是设计 / spec 阶段。
 
-## Documentation
+## 文档
 
-Update or create:
+需要更新或创建：
 
-- `README.md`: project introduction, source inspiration, usage, Git LFS note, public boundary, and academic-integrity warning
-- `收录内容.md`: semester/course index and summarized material types
-- `贡献方法.md`: contribution rules, naming suggestions, privacy policy, and excluded material policy
-- `docs/public-file-policy.md`: detailed include/exclude rules and examples
+- `README.md`：项目介绍、灵感来源、使用方式、Git LFS 说明、公开边界和学术诚信提醒
+- `收录内容.md`：按学期 / 课程列出资料索引和资料类型
+- `贡献方法.md`：贡献规则、命名建议、隐私政策和排除材料规则
+- `docs/public-file-policy.md`：详细的收录 / 排除规则和示例
 
-The tone should be similar to public course-resource repositories: helpful, explicit about boundaries, and clear that materials are for reference only.
+整体语气应接近公开课程资料仓库：有帮助、边界明确，并提醒资料仅供参考。
 
-## Git And Large Files
+## Git 与大文件
 
-The repository currently uses Git LFS for `xlsx`, `zip`, `pptx`, and `docx`, and `git status` can fail when the LFS clean filter tries to write under `.git/lfs/tmp`. The implementation should handle this before major imports.
+当前仓库使用 Git LFS 跟踪 `xlsx`、`zip`、`pptx` 和 `docx`，并且 `git status` 在 LFS clean filter 写入 `.git/lfs/tmp` 时可能失败。正式大量导入前需要处理这个问题。
 
-Minimum required behavior:
+最低要求：
 
-- keep large binary/course files under Git LFS where appropriate
-- make normal status checks usable, either by fixing the LFS temp issue or by documenting the safe status command for this repository
-- avoid adding files larger than GitHub's normal file limit outside LFS
-- avoid committing generated review artifacts that expose excluded private paths unless the user approves their contents
+- 大的二进制课程文件继续使用 Git LFS
+- 让常规状态检查可用，或在仓库中记录安全的 status 命令
+- 避免把超过 GitHub 普通文件限制的大文件放到 LFS 之外
+- 不在未经用户确认的情况下提交包含被排除隐私路径的生成清单
 
-## Verification
+## 验证
 
-Before reporting implementation complete, run checks that verify:
+实现完成前需要检查：
 
-- every imported file is under a whitelisted semester/course
-- excluded directory keywords are absent from imported paths
-- obvious courseware keywords are absent unless the file was explicitly approved
-- `.DS_Store`, Office lock files, and temporary files are not imported
-- generated indexes match the final repository tree
-- Git LFS tracking covers configured binary file types
+- 每个导入文件都位于白名单学期 / 课程目录下
+- 导入路径中不含被排除目录关键词
+- 明显课件关键词不出现在导入路径中，除非该文件被明确批准
+- `.DS_Store`、Office 锁文件和临时文件没有被导入
+- 生成的索引与最终仓库目录一致
+- Git LFS 覆盖配置中的二进制文件类型
 
-Manual review remains required for final publication because filename-based filtering cannot prove a file's privacy, copyright, or suitability.
+由于文件名规则无法证明文件隐私、版权或公开适宜性，最终公开前仍需要人工复核。
 
-## Out Of Scope
+## 不在本次范围
 
-This design does not publish the repository, push to GitHub, or make final decisions about ambiguous files. It also does not rewrite file contents, redact documents, or inspect private document bodies unless the user explicitly asks for that later.
+本设计不负责发布仓库、不推送到 GitHub，也不替用户最终决定模糊文件是否公开。除非用户后续明确要求，否则不改写文件内容、不做文档脱敏，也不打开隐私文档正文进行检查。
 
-## Approved Design Choices
+## 已确认的设计选择
 
-The user approved:
+用户已确认：
 
-- using a whitelist rather than a blacklist
-- covering all five public semesters from `大一上` through `大三上`
-- excluding courseware
-- allowing personal coursework, reports, raw data, and files containing name/student ID/group information
-- allowing textbooks, ebooks, and teacher-provided answers
-- excluding senior-student and previous-year materials
-- using a candidate-review step before actual import
+- 使用白名单制，而不是黑名单制
+- 覆盖 `大一上` 到 `大三上` 五个学期
+- 不收录课件
+- 可以收录个人作业、实验报告、原始数据，以及含姓名 / 学号 / 小组信息的文件
+- 可以收录教材、电子书和老师发的答案
+- 不收录学长学姐资料和往年资料
+- 实际导入前先生成候选清单并进行人工复核
