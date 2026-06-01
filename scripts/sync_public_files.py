@@ -4,6 +4,7 @@ import argparse
 import json
 import shutil
 import sys
+from dataclasses import replace
 from pathlib import Path
 
 from scripts.archive_policy import Candidate, load_whitelist, safe_target_path
@@ -41,7 +42,7 @@ def main(argv: list[str] | None = None) -> int:
     try:
         _copy_candidates(planned)
         manifest_path = safe_target_path(repo_root, MANIFEST_REL)
-        _write_manifest(manifest_path, [candidate for candidate, _source, _target, _source_rel in planned])
+        _write_manifest(manifest_path, _manifest_candidates(planned))
     except OSError as exc:
         print(exc, file=sys.stderr)
         return 2
@@ -104,6 +105,13 @@ def _copy_candidates(planned: list[tuple[Candidate, Path, Path, str]]) -> None:
     for _candidate, source, target, _source_rel in planned:
         target.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(source, target)
+
+
+def _manifest_candidates(planned: list[tuple[Candidate, Path, Path, str]]) -> list[Candidate]:
+    return [
+        replace(candidate, source=source_rel, source_rel=source_rel)
+        for candidate, _source, _target, source_rel in planned
+    ]
 
 
 def _write_manifest(path: Path, candidates: list[Candidate]) -> None:

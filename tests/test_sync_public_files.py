@@ -77,7 +77,8 @@ class SyncPublicFilesTest(unittest.TestCase):
 
             manifest_path = repo_root / "docs" / "review" / "imported-manifest.json"
             manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-            self.assertEqual(manifest, [approved])
+            expected_manifest = dict(approved, source="approved.docx", source_rel="approved.docx")
+            self.assertEqual(manifest, [expected_manifest])
 
     def test_rejects_traversal_target_without_writing_outside_repo(self):
         main = self._main()
@@ -284,6 +285,45 @@ class SyncPublicFilesTest(unittest.TestCase):
 
             self.assertEqual(result, 0)
             self.assertEqual((repo_root / "public" / "course" / "approved.docx").read_text(), "approved")
+
+    def test_manifest_normalizes_legacy_absolute_sources_to_relative_paths(self):
+        main = self._main()
+
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp_path = Path(tmp)
+            source_root = tmp_path / "source"
+            repo_root = tmp_path / "repo"
+            course_dir = source_root / "02大二" / "大二上" / "材料化学"
+            course_dir.mkdir(parents=True)
+            repo_root.mkdir()
+
+            source = course_dir / "approved.docx"
+            source.write_text("approved", encoding="utf-8")
+            whitelist = self._write_whitelist(repo_root, source_root)
+            review_json = self._write_review(
+                repo_root,
+                [self._candidate(source, "public/course/approved.docx", approved=True)],
+            )
+
+            with redirect_stdout(io.StringIO()):
+                result = main(
+                    [
+                        "--repo-root",
+                        repo_root.as_posix(),
+                        "--review-json",
+                        review_json.as_posix(),
+                        "--whitelist",
+                        whitelist.as_posix(),
+                    ]
+                )
+
+            self.assertEqual(result, 0)
+            manifest_path = repo_root / "docs" / "review" / "imported-manifest.json"
+            manifest_text = manifest_path.read_text(encoding="utf-8")
+            manifest = json.loads(manifest_text)
+            self.assertEqual(manifest[0]["source"], "02大二/大二上/材料化学/approved.docx")
+            self.assertEqual(manifest[0]["source_rel"], "02大二/大二上/材料化学/approved.docx")
+            self.assertNotIn(source_root.as_posix(), manifest_text)
 
     def test_rejects_absolute_source_outside_whitelist_source_root(self):
         main = self._main()
